@@ -12,6 +12,7 @@
 		0654C7E8219B80FE000CF770 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0654C7E6219B80FE000CF770 /* Main.storyboard */; };
 		0654C7EA219B80FF000CF770 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0654C7E9219B80FF000CF770 /* Assets.xcassets */; };
 		0654C7ED219B80FF000CF770 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0654C7EB219B80FF000CF770 /* LaunchScreen.storyboard */; };
+		E0A28B15219E08AC00621997 /* SwiftProtobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A28B14219E08AC00621997 /* SwiftProtobuf.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		0654C7E9219B80FF000CF770 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0654C7EC219B80FF000CF770 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0654C7EE219B80FF000CF770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0A28B14219E08AC00621997 /* SwiftProtobuf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftProtobuf.framework; path = Carthage/Build/iOS/SwiftProtobuf.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0A28B15219E08AC00621997 /* SwiftProtobuf.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 			children = (
 				0654C7E1219B80FE000CF770 /* xo_ios */,
 				0654C7E0219B80FE000CF770 /* Products */,
+				E0A28B13219E08AC00621997 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +68,14 @@
 			path = xo_ios;
 			sourceTree = "<group>";
 		};
+		E0A28B13219E08AC00621997 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E0A28B14219E08AC00621997 /* SwiftProtobuf.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -72,6 +84,7 @@
 			buildConfigurationList = 0654C7F1219B80FF000CF770 /* Build configuration list for PBXNativeTarget "xo_ios" */;
 			buildPhases = (
 				0654C7DB219B80FE000CF770 /* Sources */,
+				E0A28B11219DF8B200621997 /* ShellScript */,
 				0654C7DC219B80FE000CF770 /* Frameworks */,
 				0654C7DD219B80FE000CF770 /* Resources */,
 			);
@@ -129,6 +142,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E0A28B11219DF8B200621997 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftProtobuf.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0654C7DB219B80FE000CF770 /* Sources */ = {
@@ -283,6 +317,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = xo_ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +338,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = xo_ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
