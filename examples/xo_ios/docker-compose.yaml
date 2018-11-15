@@ -1,0 +1,75 @@
+# Copyright 2018 Bitwise IO
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# -----------------------------------------------------------------------------
+
+version: '2.1'
+
+services:
+
+  validator:
+    image: hyperledger/sawtooth-validator:1.0
+    container_name: sawtooth-validator-ios
+    expose:
+      - 4004
+    entrypoint: |
+      bash -c "
+        if [ ! -f /etc/sawtooth/keys/validator.priv ]; then
+          sawadm keygen &&
+          sawtooth keygen my_key &&
+          sawset genesis -k /root/.sawtooth/keys/my_key.priv &&
+          sawadm genesis config-genesis.batch
+        fi;
+        sawtooth-validator -v \
+          --endpoint tcp://validator:8800 \
+          --bind component:tcp://eth0:4004 \
+          --bind network:tcp://eth0:8800
+      "
+
+  settings-tp:
+    image: hyperledger/sawtooth-settings-tp:1.0
+    container_name: sawtooth-settings-tp-ios
+    depends_on:
+      - validator
+    entrypoint: settings-tp -v -C tcp://validator:4004
+
+  xo-tp:
+      image: hyperledger/sawtooth-xo-tp-python:1.0
+      volumes:
+        - ./:/project/sawtooth-core
+      container_name: sawtooth-xo-tp-ios
+      depends_on:
+        - validator
+      entrypoint: xo-tp-python -vv -C tcp://validator:4004
+      stop_signal: SIGKILL
+
+  sawtooth-shell:
+    image: hyperledger/sawtooth-shell:1.0
+    container_name: sawtooth-shell-ios
+    depends_on:
+      - validator
+    command: |
+        bash -c "
+          sawtooth keygen &&
+          tail -f /dev/null
+        "
+    stop_signal: SIGKILL
+
+  sawtooth-rest-api:
+    image: hyperledger/sawtooth-rest-api:1.0
+    container_name: sawtooth-rest-api-ios
+    expose:
+      - 8080
+    ports:
+      - "8080:8080"
+    entrypoint: sawtooth-rest-api --connect tcp://validator:4004 --bind sawtooth-rest-api:8080 -vv
