@@ -3,6 +3,7 @@
 ## Build generated
 build/
 DerivedData/
+proto/
 
 ## Various settings
 *.pbxuser
