@@ -160,6 +160,7 @@
 			buildConfigurationList = 0663519A219CDC1B003E22B4 /* Build configuration list for PBXNativeTarget "SawtoothSigning" */;
 			buildPhases = (
 				06757C06219DFA2100BB8470 /* Run Script */,
+				06BEB54D21A5DAB200C6724C /* ShellScript */,
 				06635181219CDC1B003E22B4 /* Headers */,
 				06635182219CDC1B003E22B4 /* Sources */,
 				06635183219CDC1B003E22B4 /* Frameworks */,
@@ -267,6 +268,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		06BEB54D21A5DAB200C6724C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
