@@ -20,12 +20,12 @@
 public class Signer {
     var context: Context
     var privateKey: PrivateKey
-    
+
     init(context: Context, privateKey: PrivateKey) {
         self.context = context
         self.privateKey = privateKey
     }
-    
+
     /**
         Produce a hex encoded signature from the data and the private key.
      
@@ -37,7 +37,7 @@ public class Signer {
     public func sign(data: [UInt8]) -> String {
         return self.context.sign(data: data, privateKey: self.privateKey)
     }
-    
+
     /**
         Get the public key associated with the private key.
      

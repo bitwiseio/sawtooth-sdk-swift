@@ -18,21 +18,21 @@
 
 /// Protocol to be implemented by different signing backends.
 public protocol Context {
-    
+
     /// The algorithm name associated with the type of Context.
     static var algorithmName: String { get }
-    
+
     /**
         Create a signature by signing the bytes.
      
         - Parameters:
             - data: The bytes being signed.
             - privateKey: Private key of the signer.
-     
+
         - Returns: Hex encoded signature.
     */
     func sign(data: [UInt8], privateKey: PrivateKey) -> String
-    
+
     /**
         Verify that the private key associated with the public key
         produced the signature by signing the bytes.
@@ -55,7 +55,7 @@ public protocol Context {
         - Returns: Public key associated with the given private key.
      */
     func getPublicKey(privateKey: PrivateKey) -> PublicKey
-    
+
     /**
         Generate a random private key.
      
