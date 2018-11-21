@@ -18,15 +18,14 @@
 
 public protocol PublicKey {
     static var algorithmName: String { get }
-    
+
     /**
      Return the PublicKey, hex encoded.
      
      - Returns: Hex encoded private key
      */
     func hex() -> String
-    
-    
+
     /**
      Return the bytes underlying the PublicKey.
      

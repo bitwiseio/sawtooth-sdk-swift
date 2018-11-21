@@ -20,20 +20,19 @@
 public protocol PrivateKey {
     /// The algorithm name associated with the PrivateKey.
     static var algorithmName: String { get }
-    
+
     /**
         Return the PrivateKey, hex encoded.
 
         - Returns: Hex encoded private key
      */
     func hex() -> String
-    
-    
+
     /**
         Return the bytes underlying the PrivateKey.
      
         - Returns: Bytes underlying the private key.
     */
     func getBytes() -> [UInt8]
-    
+
 }

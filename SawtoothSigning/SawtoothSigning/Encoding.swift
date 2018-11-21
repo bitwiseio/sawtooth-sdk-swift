@@ -38,7 +38,7 @@ extension StringProtocol {
 
 public func hash(data: [UInt8]) -> Data {
     var digest = Data(count: Int(CC_SHA256_DIGEST_LENGTH))
-    
+
     _ = digest.withUnsafeMutableBytes { (digestBytes) in
         CC_SHA256(data, CC_LONG(data.count), digestBytes)
     }

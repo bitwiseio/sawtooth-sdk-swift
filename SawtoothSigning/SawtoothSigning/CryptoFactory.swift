@@ -19,9 +19,9 @@
 public class CryptoFactory {
     /// Private constructor for Factory class.
     init() {}
-    
+
     static func createContext(algorithmName: String) -> Context {
-        if (algorithmName == "secp256k1") {
+        if algorithmName == "secp256k1" {
             return Secp256k1Context()
         }
         fatalError(String(format: "Algorithm %@ is not implemented", algorithmName))
