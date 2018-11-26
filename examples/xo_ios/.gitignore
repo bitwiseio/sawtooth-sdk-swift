@@ -3,6 +3,7 @@
 ## Build generated
 build/
 DerivedData/
+proto/
 
 ## Various settings
 *.pbxuser
@@ -14,6 +15,9 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata/
+
+## Carthage
+Carthage/
 
 ## Other
 *.moved-aside

@@ -8,10 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		0654C7E3219B80FE000CF770 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654C7E2219B80FE000CF770 /* AppDelegate.swift */; };
-		0654C7E5219B80FE000CF770 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654C7E4219B80FE000CF770 /* ViewController.swift */; };
 		0654C7E8219B80FE000CF770 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0654C7E6219B80FE000CF770 /* Main.storyboard */; };
 		0654C7EA219B80FF000CF770 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0654C7E9219B80FF000CF770 /* Assets.xcassets */; };
 		0654C7ED219B80FF000CF770 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0654C7EB219B80FF000CF770 /* LaunchScreen.storyboard */; };
+		E0935EC9219F8F560029E2CC /* client_batch.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EB0219F8F520029E2CC /* client_batch.pb.swift */; };
+		E0935ECA219F8F590029E2CC /* network.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EB1219F8F520029E2CC /* network.pb.swift */; };
+		E0935ECB219F8F5C0029E2CC /* client_block.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EB2219F8F520029E2CC /* client_block.pb.swift */; };
+		E0935ECC219F8F5F0029E2CC /* merkle.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EB3219F8F520029E2CC /* merkle.pb.swift */; };
+		E0935ECD219F8F610029E2CC /* authorization.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EB4219F8F520029E2CC /* authorization.pb.swift */; };
+		E0935ECE219F8F640029E2CC /* identity.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EB5219F8F520029E2CC /* identity.pb.swift */; };
+		E0935ECF219F8F670029E2CC /* client_event.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EB6219F8F520029E2CC /* client_event.pb.swift */; };
+		E0935ED0219F8F6B0029E2CC /* client_list_control.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EB7219F8F520029E2CC /* client_list_control.pb.swift */; };
+		E0935ED1219F8F6E0029E2CC /* batch.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EB8219F8F520029E2CC /* batch.pb.swift */; };
+		E0935ED2219F8F710029E2CC /* transaction_receipt.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EB9219F8F520029E2CC /* transaction_receipt.pb.swift */; };
+		E0935ED3219F8F730029E2CC /* client_status.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EBA219F8F520029E2CC /* client_status.pb.swift */; };
+		E0935ED4219F8F760029E2CC /* block.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EBB219F8F520029E2CC /* block.pb.swift */; };
+		E0935ED5219F8F790029E2CC /* genesis.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EBC219F8F520029E2CC /* genesis.pb.swift */; };
+		E0935ED6219F8F7B0029E2CC /* setting.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EBD219F8F520029E2CC /* setting.pb.swift */; };
+		E0935ED7219F8F7E0029E2CC /* validator.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EBE219F8F520029E2CC /* validator.pb.swift */; };
+		E0935ED8219F8F800029E2CC /* processor.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EBF219F8F520029E2CC /* processor.pb.swift */; };
+		E0935ED9219F8F830029E2CC /* client_batch_submit.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EC0219F8F520029E2CC /* client_batch_submit.pb.swift */; };
+		E0935EDA219F8F850029E2CC /* client_receipt.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EC1219F8F520029E2CC /* client_receipt.pb.swift */; };
+		E0935EDB219F8F880029E2CC /* events.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EC2219F8F520029E2CC /* events.pb.swift */; };
+		E0935EDC219F8F8B0029E2CC /* client_transaction.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EC3219F8F520029E2CC /* client_transaction.pb.swift */; };
+		E0935EDD219F8F8D0029E2CC /* state_context.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EC4219F8F520029E2CC /* state_context.pb.swift */; };
+		E0935EDE219F8F900029E2CC /* transaction.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EC5219F8F520029E2CC /* transaction.pb.swift */; };
+		E0935EDF219F8F920029E2CC /* consensus.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EC6219F8F520029E2CC /* consensus.pb.swift */; };
+		E0935EE0219F8F950029E2CC /* client_peers.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EC7219F8F520029E2CC /* client_peers.pb.swift */; };
+		E0935EE1219F8F980029E2CC /* client_state.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EC8219F8F520029E2CC /* client_state.pb.swift */; };
+		E0935EE221A1DA840029E2CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654C7E4219B80FE000CF770 /* ViewController.swift */; };
+		E0A28B15219E08AC00621997 /* SwiftProtobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A28B14219E08AC00621997 /* SwiftProtobuf.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +48,32 @@
 		0654C7E9219B80FF000CF770 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0654C7EC219B80FF000CF770 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0654C7EE219B80FF000CF770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0935EB0219F8F520029E2CC /* client_batch.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = client_batch.pb.swift; sourceTree = "<group>"; };
+		E0935EB1219F8F520029E2CC /* network.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = network.pb.swift; sourceTree = "<group>"; };
+		E0935EB2219F8F520029E2CC /* client_block.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = client_block.pb.swift; sourceTree = "<group>"; };
+		E0935EB3219F8F520029E2CC /* merkle.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = merkle.pb.swift; sourceTree = "<group>"; };
+		E0935EB4219F8F520029E2CC /* authorization.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = authorization.pb.swift; sourceTree = "<group>"; };
+		E0935EB5219F8F520029E2CC /* identity.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = identity.pb.swift; sourceTree = "<group>"; };
+		E0935EB6219F8F520029E2CC /* client_event.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = client_event.pb.swift; sourceTree = "<group>"; };
+		E0935EB7219F8F520029E2CC /* client_list_control.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = client_list_control.pb.swift; sourceTree = "<group>"; };
+		E0935EB8219F8F520029E2CC /* batch.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = batch.pb.swift; sourceTree = "<group>"; };
+		E0935EB9219F8F520029E2CC /* transaction_receipt.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transaction_receipt.pb.swift; sourceTree = "<group>"; };
+		E0935EBA219F8F520029E2CC /* client_status.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = client_status.pb.swift; sourceTree = "<group>"; };
+		E0935EBB219F8F520029E2CC /* block.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = block.pb.swift; sourceTree = "<group>"; };
+		E0935EBC219F8F520029E2CC /* genesis.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = genesis.pb.swift; sourceTree = "<group>"; };
+		E0935EBD219F8F520029E2CC /* setting.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setting.pb.swift; sourceTree = "<group>"; };
+		E0935EBE219F8F520029E2CC /* validator.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = validator.pb.swift; sourceTree = "<group>"; };
+		E0935EBF219F8F520029E2CC /* processor.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = processor.pb.swift; sourceTree = "<group>"; };
+		E0935EC0219F8F520029E2CC /* client_batch_submit.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = client_batch_submit.pb.swift; sourceTree = "<group>"; };
+		E0935EC1219F8F520029E2CC /* client_receipt.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = client_receipt.pb.swift; sourceTree = "<group>"; };
+		E0935EC2219F8F520029E2CC /* events.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = events.pb.swift; sourceTree = "<group>"; };
+		E0935EC3219F8F520029E2CC /* client_transaction.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = client_transaction.pb.swift; sourceTree = "<group>"; };
+		E0935EC4219F8F520029E2CC /* state_context.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = state_context.pb.swift; sourceTree = "<group>"; };
+		E0935EC5219F8F520029E2CC /* transaction.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transaction.pb.swift; sourceTree = "<group>"; };
+		E0935EC6219F8F520029E2CC /* consensus.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = consensus.pb.swift; sourceTree = "<group>"; };
+		E0935EC7219F8F520029E2CC /* client_peers.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = client_peers.pb.swift; sourceTree = "<group>"; };
+		E0935EC8219F8F520029E2CC /* client_state.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = client_state.pb.swift; sourceTree = "<group>"; };
+		E0A28B14219E08AC00621997 /* SwiftProtobuf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftProtobuf.framework; path = Carthage/Build/iOS/SwiftProtobuf.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0A28B15219E08AC00621997 /* SwiftProtobuf.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +91,10 @@
 		0654C7D6219B80FE000CF770 = {
 			isa = PBXGroup;
 			children = (
+				E0935EAF219F8F520029E2CC /* proto */,
 				0654C7E1219B80FE000CF770 /* xo_ios */,
 				0654C7E0219B80FE000CF770 /* Products */,
+				E0A28B13219E08AC00621997 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +119,47 @@
 			path = xo_ios;
 			sourceTree = "<group>";
 		};
+		E0935EAF219F8F520029E2CC /* proto */ = {
+			isa = PBXGroup;
+			children = (
+				E0935EB0219F8F520029E2CC /* client_batch.pb.swift */,
+				E0935EB1219F8F520029E2CC /* network.pb.swift */,
+				E0935EB2219F8F520029E2CC /* client_block.pb.swift */,
+				E0935EB3219F8F520029E2CC /* merkle.pb.swift */,
+				E0935EB4219F8F520029E2CC /* authorization.pb.swift */,
+				E0935EB5219F8F520029E2CC /* identity.pb.swift */,
+				E0935EB6219F8F520029E2CC /* client_event.pb.swift */,
+				E0935EB7219F8F520029E2CC /* client_list_control.pb.swift */,
+				E0935EB8219F8F520029E2CC /* batch.pb.swift */,
+				E0935EB9219F8F520029E2CC /* transaction_receipt.pb.swift */,
+				E0935EBA219F8F520029E2CC /* client_status.pb.swift */,
+				E0935EBB219F8F520029E2CC /* block.pb.swift */,
+				E0935EBC219F8F520029E2CC /* genesis.pb.swift */,
+				E0935EBD219F8F520029E2CC /* setting.pb.swift */,
+				E0935EBE219F8F520029E2CC /* validator.pb.swift */,
+				E0935EBF219F8F520029E2CC /* processor.pb.swift */,
+				E0935EC0219F8F520029E2CC /* client_batch_submit.pb.swift */,
+				E0935EC1219F8F520029E2CC /* client_receipt.pb.swift */,
+				E0935EC2219F8F520029E2CC /* events.pb.swift */,
+				E0935EC3219F8F520029E2CC /* client_transaction.pb.swift */,
+				E0935EC4219F8F520029E2CC /* state_context.pb.swift */,
+				E0935EC5219F8F520029E2CC /* transaction.pb.swift */,
+				E0935EC6219F8F520029E2CC /* consensus.pb.swift */,
+				E0935EC7219F8F520029E2CC /* client_peers.pb.swift */,
+				E0935EC8219F8F520029E2CC /* client_state.pb.swift */,
+			);
+			name = proto;
+			path = xo_ios/proto;
+			sourceTree = "<group>";
+		};
+		E0A28B13219E08AC00621997 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E0A28B14219E08AC00621997 /* SwiftProtobuf.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -72,6 +168,7 @@
 			buildConfigurationList = 0654C7F1219B80FF000CF770 /* Build configuration list for PBXNativeTarget "xo_ios" */;
 			buildPhases = (
 				0654C7DB219B80FE000CF770 /* Sources */,
+				E0A28B11219DF8B200621997 /* ShellScript */,
 				0654C7DC219B80FE000CF770 /* Frameworks */,
 				0654C7DD219B80FE000CF770 /* Resources */,
 			);
@@ -130,13 +227,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E0A28B11219DF8B200621997 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftProtobuf.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0654C7DB219B80FE000CF770 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0654C7E5219B80FE000CF770 /* ViewController.swift in Sources */,
+				E0935EDD219F8F8D0029E2CC /* state_context.pb.swift in Sources */,
+				E0935ECF219F8F670029E2CC /* client_event.pb.swift in Sources */,
+				E0935ED9219F8F830029E2CC /* client_batch_submit.pb.swift in Sources */,
+				E0935ECA219F8F590029E2CC /* network.pb.swift in Sources */,
+				E0935EDA219F8F850029E2CC /* client_receipt.pb.swift in Sources */,
+				E0935ED3219F8F730029E2CC /* client_status.pb.swift in Sources */,
+				E0935ED4219F8F760029E2CC /* block.pb.swift in Sources */,
+				E0935ED8219F8F800029E2CC /* processor.pb.swift in Sources */,
+				E0935EDC219F8F8B0029E2CC /* client_transaction.pb.swift in Sources */,
+				E0935ED0219F8F6B0029E2CC /* client_list_control.pb.swift in Sources */,
+				E0935ED2219F8F710029E2CC /* transaction_receipt.pb.swift in Sources */,
+				E0935ECC219F8F5F0029E2CC /* merkle.pb.swift in Sources */,
+				E0935EDB219F8F880029E2CC /* events.pb.swift in Sources */,
+				E0935EDF219F8F920029E2CC /* consensus.pb.swift in Sources */,
+				E0935ED7219F8F7E0029E2CC /* validator.pb.swift in Sources */,
+				E0935ECB219F8F5C0029E2CC /* client_block.pb.swift in Sources */,
+				E0935EE1219F8F980029E2CC /* client_state.pb.swift in Sources */,
+				E0935ED6219F8F7B0029E2CC /* setting.pb.swift in Sources */,
+				E0935ED1219F8F6E0029E2CC /* batch.pb.swift in Sources */,
+				E0935EE0219F8F950029E2CC /* client_peers.pb.swift in Sources */,
+				E0935ECD219F8F610029E2CC /* authorization.pb.swift in Sources */,
+				E0935EC9219F8F560029E2CC /* client_batch.pb.swift in Sources */,
+				E0935ECE219F8F640029E2CC /* identity.pb.swift in Sources */,
+				E0935EDE219F8F900029E2CC /* transaction.pb.swift in Sources */,
+				E0935ED5219F8F790029E2CC /* genesis.pb.swift in Sources */,
 				0654C7E3219B80FE000CF770 /* AppDelegate.swift in Sources */,
+				E0935EE221A1DA840029E2CC /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +426,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = xo_ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,11 +447,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = xo_ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = proto;
 				PRODUCT_BUNDLE_IDENTIFIER = "bitwiseio.xo-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
