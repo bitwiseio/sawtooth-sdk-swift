@@ -1,1 +1,2 @@
+github "Boilertalk/secp256k1.swift" "0.1.4"
 github "apple/swift-protobuf" "1.2.0"

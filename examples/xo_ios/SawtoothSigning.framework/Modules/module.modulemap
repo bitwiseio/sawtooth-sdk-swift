@@ -1,0 +1,11 @@
+framework module SawtoothSigning {
+  umbrella header "SawtoothSigning.h"
+
+  export *
+  module * { export * }
+}
+
+module SawtoothSigning.Swift {
+    header "SawtoothSigning-Swift.h"
+    requires objc
+}
