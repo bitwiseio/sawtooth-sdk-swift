@@ -38,7 +38,23 @@
 		E0935EE1219F8F980029E2CC /* client_state.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EC8219F8F520029E2CC /* client_state.pb.swift */; };
 		E0935EE221A1DA840029E2CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654C7E4219B80FE000CF770 /* ViewController.swift */; };
 		E0A28B15219E08AC00621997 /* SwiftProtobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A28B14219E08AC00621997 /* SwiftProtobuf.framework */; };
+		E0D645D521AD9CD300F14B2C /* SawtoothSigning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0D645D421AD9CD300F14B2C /* SawtoothSigning.framework */; };
+		E0D645D621AD9CD300F14B2C /* SawtoothSigning.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E0D645D421AD9CD300F14B2C /* SawtoothSigning.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E0D645D721AD9CD300F14B2C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E0D645D621AD9CD300F14B2C /* SawtoothSigning.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0654C7DF219B80FE000CF770 /* xo_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xo_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +90,7 @@
 		E0935EC7219F8F520029E2CC /* client_peers.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = client_peers.pb.swift; sourceTree = "<group>"; };
 		E0935EC8219F8F520029E2CC /* client_state.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = client_state.pb.swift; sourceTree = "<group>"; };
 		E0A28B14219E08AC00621997 /* SwiftProtobuf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftProtobuf.framework; path = Carthage/Build/iOS/SwiftProtobuf.framework; sourceTree = "<group>"; };
+		E0D645D421AD9CD300F14B2C /* SawtoothSigning.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SawtoothSigning.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +99,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0A28B15219E08AC00621997 /* SwiftProtobuf.framework in Frameworks */,
+				E0D645D521AD9CD300F14B2C /* SawtoothSigning.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +173,7 @@
 		E0A28B13219E08AC00621997 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E0D645D421AD9CD300F14B2C /* SawtoothSigning.framework */,
 				E0A28B14219E08AC00621997 /* SwiftProtobuf.framework */,
 			);
 			name = Frameworks;
@@ -171,6 +190,7 @@
 				E0A28B11219DF8B200621997 /* ShellScript */,
 				0654C7DC219B80FE000CF770 /* Frameworks */,
 				0654C7DD219B80FE000CF770 /* Resources */,
+				E0D645D721AD9CD300F14B2C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -429,6 +449,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = xo_ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -450,6 +471,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = xo_ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
