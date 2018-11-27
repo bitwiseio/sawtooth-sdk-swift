@@ -37,6 +37,8 @@
 		E0935EE0219F8F950029E2CC /* client_peers.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EC7219F8F520029E2CC /* client_peers.pb.swift */; };
 		E0935EE1219F8F980029E2CC /* client_state.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EC8219F8F520029E2CC /* client_state.pb.swift */; };
 		E0935EE221A1DA840029E2CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654C7E4219B80FE000CF770 /* ViewController.swift */; };
+		E094CF1A21ADBA3C00897161 /* secp256k1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E00464BF21ADA93400328068 /* secp256k1.framework */; };
+		E094CF1B21ADBA3C00897161 /* secp256k1.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E00464BF21ADA93400328068 /* secp256k1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E0A28B15219E08AC00621997 /* SwiftProtobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A28B14219E08AC00621997 /* SwiftProtobuf.framework */; };
 		E0D645D521AD9CD300F14B2C /* SawtoothSigning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0D645D421AD9CD300F14B2C /* SawtoothSigning.framework */; };
 		E0D645D621AD9CD300F14B2C /* SawtoothSigning.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E0D645D421AD9CD300F14B2C /* SawtoothSigning.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -50,6 +52,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				E0D645D621AD9CD300F14B2C /* SawtoothSigning.framework in Embed Frameworks */,
+				E094CF1B21ADBA3C00897161 /* secp256k1.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,6 +67,7 @@
 		0654C7E9219B80FF000CF770 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0654C7EC219B80FF000CF770 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0654C7EE219B80FF000CF770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E00464BF21ADA93400328068 /* secp256k1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = secp256k1.framework; path = Carthage/Build/iOS/secp256k1.framework; sourceTree = "<group>"; };
 		E0935EB0219F8F520029E2CC /* client_batch.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = client_batch.pb.swift; sourceTree = "<group>"; };
 		E0935EB1219F8F520029E2CC /* network.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = network.pb.swift; sourceTree = "<group>"; };
 		E0935EB2219F8F520029E2CC /* client_block.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = client_block.pb.swift; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 			files = (
 				E0A28B15219E08AC00621997 /* SwiftProtobuf.framework in Frameworks */,
 				E0D645D521AD9CD300F14B2C /* SawtoothSigning.framework in Frameworks */,
+				E094CF1A21ADBA3C00897161 /* secp256k1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +178,7 @@
 		E0A28B13219E08AC00621997 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E00464BF21ADA93400328068 /* secp256k1.framework */,
 				E0D645D421AD9CD300F14B2C /* SawtoothSigning.framework */,
 				E0A28B14219E08AC00621997 /* SwiftProtobuf.framework */,
 			);
