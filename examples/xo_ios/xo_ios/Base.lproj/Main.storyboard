@@ -62,7 +62,11 @@
                                 <segue destination="dQD-m5-Wc1" kind="show" id="lIR-6f-vg7"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Submit" id="bGJ-6I-BR0"/>
+                        <barButtonItem key="rightBarButtonItem" title="Submit" id="bGJ-6I-BR0">
+                            <connections>
+                                <action selector="saveNewGame:" destination="cMt-8j-Tbq" id="giP-pz-EPv"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
