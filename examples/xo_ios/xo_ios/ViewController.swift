@@ -13,11 +13,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let XO = XORequestHandler()
+        let handler = XORequestHandler()
 
-        XO.createGame(game: UUID().uuidString)
+        handler.createGame(game: UUID().uuidString)
     }
 
-
 }
-

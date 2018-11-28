@@ -51,7 +51,7 @@ class XOApi {
             }
         }.resume()
     }
-    
+
     private func getBatchStatus(batchID: String, wait: Int) {
         let batchStatuses = URL(string: self.url + "/batch_statuses?id=\(batchID)&wait=\(wait)")!
         URLSession.shared.dataTask(with: batchStatuses) {(data, response, error) in

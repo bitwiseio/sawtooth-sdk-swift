@@ -25,7 +25,7 @@ class XORequestHandler {
     var gameName: String
     private var signer: Signer
     private var api: XOApi
-    
+
     init() {
         self.gameName = ""
         let context = Secp256k1Context()
@@ -33,14 +33,14 @@ class XORequestHandler {
         self.signer = Signer(context: context, privateKey: privateKey)
         self.api = XOApi(url: url)
     }
-    
+
     func createGame(game: String) {
         self.gameName = game
         let createGameTransaction = makeTransaction(game: game, action: "create", space: "")
         let (batchList, batchID) = makeBatchList(transactions: [createGameTransaction])
         api.postRequest(batchList: batchList, batchId: batchID)
     }
-    
+
     func makeTransaction(game: String, action: String, space: String) -> Transaction {
         let transactionAddress = makeAddress(name: game)
         let payloadString = "\(game),\(action),\(space)"
@@ -54,7 +54,7 @@ class XORequestHandler {
         transactionHeader.outputs = [transactionAddress]
         transactionHeader.payloadSha512 = hash(item: payloadString)
         transactionHeader.nonce = UUID().uuidString
-        
+
         var transaction = Transaction()
         do {
             let transactionHeaderData = try transactionHeader.serializedData()
@@ -68,12 +68,12 @@ class XORequestHandler {
         transaction.payload = payloadData!
         return transaction
     }
-    
+
     func makeBatchList(transactions: [Transaction]) -> (BatchList, String) {
         var batchHeader = BatchHeader()
         batchHeader.signerPublicKey = signer.getPublicKey().hex()
         batchHeader.transactionIds = transactions.map({ $0.headerSignature })
-        
+
         var batch = Batch()
         do {
             let batchHeaderData = try batchHeader.serializedData()
@@ -89,13 +89,13 @@ class XORequestHandler {
         batchList.batches = [batch]
         return (batchList, batch.headerSignature)
     }
-    
+
     private func makeAddress(name: String) -> String {
         let xoPrefix = hash(item: "xo").prefix(6)
         let game = hash(item: name).prefix(64)
         return "\(xoPrefix)\(game)"
     }
-    
+
     private func hash(item: String) -> String {
         var digest = [UInt8](repeating: 0, count: Int(CC_SHA512_DIGEST_LENGTH))
         if let data = item.data(using: String.Encoding.utf8) {
