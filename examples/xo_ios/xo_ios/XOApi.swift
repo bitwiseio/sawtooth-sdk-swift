@@ -23,7 +23,39 @@ class XOApi {
     init(url: String) {
         self.url = url
     }
-    
+
+    enum BatchStatusEnum: String {
+        case invalid = "INVALID"
+        case committed = "COMMITTED"
+        case pending = "PENDING"
+        case unknown = "UNKNOWN"
+        case unhandled = "UNHANDLED"
+    }
+
+    struct InvalidTransaction {
+        var id: String
+        var message: String
+        var extendedData: String
+        init(_ dictionary: [String: Any]) {
+            self.id = dictionary["id"] as? String ?? ""
+            self.message = dictionary["message"] as? String ?? ""
+            self.extendedData = dictionary["extended_data"] as? String ?? ""
+        }
+    }
+
+    struct BatchStatus {
+        var id: String
+        var status: BatchStatusEnum
+        var invalidTransactions: [InvalidTransaction]
+        init(_ dictionary: [String: Any]) {
+            self.id = dictionary["id"] as? String ?? ""
+            self.status = BatchStatusEnum(
+                rawValue: dictionary["status"] as? String ?? "UNHANDLED") ?? BatchStatusEnum.unhandled
+            self.invalidTransactions = (
+                dictionary["invalid_transactions"] as? [[String: Any]] ?? []).compactMap(InvalidTransaction.init)
+        }
+    }
+
     public func postRequest(batchList: BatchList, batchId: String) {
         let postBatch = URL(string: self.url + "/batches")!
         var postUrlRequest = URLRequest(url: postBatch)
@@ -64,34 +96,41 @@ class XOApi {
             if let httpResponse = response as? HTTPURLResponse {
                 if httpResponse.statusCode == 200 {
                     do {
-                        let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-                        let dataArry = json["data"] as! NSArray
-                        let dataDictionary: NSDictionary = dataArry.firstObject! as! NSDictionary
-                        self.handleBatchStatus(batchStatusData: dataDictionary)
-                    } catch {
-                        print("Unable to serialize response data")
+                        let jsonResponse = try JSONSerialization.jsonObject(with: data, options: [])
+                        guard let batchStatusResponse = jsonResponse as? [String: Any] else {
+                            print("Failed to deserialize batch status response")
+                            return
+                        }
+                        guard let dataArray = batchStatusResponse["data"] as? [[String: Any]] else {
+                            print("Failed to fetch batch status data")
+                            return
+                        }
+                        let batchStatus = dataArray.compactMap(BatchStatus.init)[0]
+                        self.handleBatchStatus(batchStatus: batchStatus)
+                    } catch let parsingError {
+                        print("Error", parsingError)
                     }
                 }
             } else {
+                print("Error parsing batch status response")
                 return
             }
         }.resume()
     }
-    
-    private func handleBatchStatus(batchStatusData: NSDictionary) {
-        switch batchStatusData["status"]! as! String {
-        case "INVALID":
-            let invalidTransactions = batchStatusData["invalid_transactions"] as! NSArray
-            let invalidTransactionDictionary = invalidTransactions.firstObject! as! NSDictionary
-            print(invalidTransactionDictionary["message"] as! String)
-            print("Invalid Transaction ID: \(invalidTransactionDictionary["id"] as! String)")
-        case "COMMITTED":
+
+    private func handleBatchStatus(batchStatus: BatchStatus) {
+        switch batchStatus.status {
+        case BatchStatusEnum.invalid:
+            let invalidTransaction = batchStatus.invalidTransactions[0]
+            print(invalidTransaction.message)
+            print("Invalid Transaction ID: \(invalidTransaction.id)")
+        case BatchStatusEnum.committed:
             print("Game Successfully Created!")
-        case "PENDING":
+        case BatchStatusEnum.pending:
             print("Batch Pending")
-        case "UNKNOWN":
+        case BatchStatusEnum.unknown:
             print("Batch Status Unknown")
-        default:
+        case BatchStatusEnum.unhandled:
             print("Unhandled status")
         }
     }
