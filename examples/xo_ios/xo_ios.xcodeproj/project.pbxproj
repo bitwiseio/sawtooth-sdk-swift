@@ -42,6 +42,7 @@
 		E0A28B15219E08AC00621997 /* SwiftProtobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A28B14219E08AC00621997 /* SwiftProtobuf.framework */; };
 		E0D645D521AD9CD300F14B2C /* SawtoothSigning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0D645D421AD9CD300F14B2C /* SawtoothSigning.framework */; };
 		E0D645D621AD9CD300F14B2C /* SawtoothSigning.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E0D645D421AD9CD300F14B2C /* SawtoothSigning.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E0D64A9221A8DAA800A5E81C /* CreateGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D64A9121A8DAA800A5E81C /* CreateGameViewController.swift */; };
 		E0D89A5F21A5AFD700623CDA /* XORequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D89A5E21A5AFD700623CDA /* XORequestHandler.swift */; };
 		E0D89A6121A5B2E900623CDA /* XOApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D89A6021A5B2E900623CDA /* XOApi.swift */; };
 /* End PBXBuildFile section */
@@ -97,6 +98,7 @@
 		E0935EC8219F8F520029E2CC /* client_state.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = client_state.pb.swift; sourceTree = "<group>"; };
 		E0A28B14219E08AC00621997 /* SwiftProtobuf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftProtobuf.framework; path = Carthage/Build/iOS/SwiftProtobuf.framework; sourceTree = "<group>"; };
 		E0D645D421AD9CD300F14B2C /* SawtoothSigning.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SawtoothSigning.framework; sourceTree = "<group>"; };
+		E0D64A9121A8DAA800A5E81C /* CreateGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGameViewController.swift; sourceTree = "<group>"; };
 		E0D89A5E21A5AFD700623CDA /* XORequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XORequestHandler.swift; sourceTree = "<group>"; };
 		E0D89A6021A5B2E900623CDA /* XOApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XOApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,6 +141,7 @@
 				0654C7E2219B80FE000CF770 /* AppDelegate.swift */,
 				0654C7E4219B80FE000CF770 /* ViewController.swift */,
 				0654C7E6219B80FE000CF770 /* Main.storyboard */,
+				E0D64A9121A8DAA800A5E81C /* CreateGameViewController.swift */,
 				0654C7E9219B80FF000CF770 /* Assets.xcassets */,
 				0654C7EB219B80FF000CF770 /* LaunchScreen.storyboard */,
 				E0D89A5E21A5AFD700623CDA /* XORequestHandler.swift */,
@@ -327,6 +330,7 @@
 				E0935ECD219F8F610029E2CC /* authorization.pb.swift in Sources */,
 				E0935EC9219F8F560029E2CC /* client_batch.pb.swift in Sources */,
 				E0935ECE219F8F640029E2CC /* identity.pb.swift in Sources */,
+				E0D64A9221A8DAA800A5E81C /* CreateGameViewController.swift in Sources */,
 				E0935EDE219F8F900029E2CC /* transaction.pb.swift in Sources */,
 				E0935ED5219F8F790029E2CC /* genesis.pb.swift in Sources */,
 				0654C7E3219B80FE000CF770 /* AppDelegate.swift in Sources */,

@@ -1,24 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dQD-m5-Wc1">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--XO iOS-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController storyboardIdentifier="MainView" id="BYZ-38-t0r" customClass="ViewController" customModule="xo_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yp2-rf-vcO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="LXQ-hH-Uim"/>
                     </view>
+                    <navigationItem key="navigationItem" title="XO iOS" id="91V-Nn-u6m">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jwc-Cg-GIg">
+                            <connections>
+                                <segue destination="cMt-8j-Tbq" kind="show" id="igj-tJ-af1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="3896.8000000000002" y="125.4872563718141"/>
+        </scene>
+        <!--Create Game-->
+        <scene sceneID="cyf-kz-DFf">
+            <objects>
+                <viewController storyboardIdentifier="createGameView" id="cMt-8j-Tbq" customClass="CreateGameViewController" customModule="xo_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pvi-os-aYr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Game name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="W7c-Uf-uWS" userLabel="createGameTextField">
+                                <rect key="frame" x="16" y="85" width="343" height="19"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet" textContentType="name"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="W7c-Uf-uWS" firstAttribute="top" secondItem="pFN-XN-4xf" secondAttribute="top" constant="21" id="LLH-nX-NVO"/>
+                            <constraint firstItem="W7c-Uf-uWS" firstAttribute="leading" secondItem="pvi-os-aYr" secondAttribute="leadingMargin" id="TXu-bu-8Qi"/>
+                            <constraint firstItem="W7c-Uf-uWS" firstAttribute="trailing" secondItem="pvi-os-aYr" secondAttribute="trailingMargin" id="ywS-e3-9fp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pFN-XN-4xf"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Create Game" id="AEc-PL-f8M">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="nn7-dT-XqF">
+                            <connections>
+                                <segue destination="dQD-m5-Wc1" kind="show" id="lIR-6f-vg7"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Submit" id="bGJ-6I-BR0"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="createGameInputField" destination="W7c-Uf-uWS" id="SMj-Hh-9GI"/>
+                        <segue destination="dQD-m5-Wc1" kind="show" identifier="createGameEndSegue" id="l6z-8b-pah"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3LU-Bk-zNI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5007" y="69"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FSA-mJ-Gov">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dQD-m5-Wc1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1oE-al-JcS">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bsU-ma-rUh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qoD-k8-A0W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2957.5999999999999" y="125.4872563718141"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="lIR-6f-vg7"/>
+    </inferredMetricsTieBreakers>
 </document>
