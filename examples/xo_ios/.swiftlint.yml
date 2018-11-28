@@ -1,0 +1,9 @@
+included:
+  - xo_ios
+
+excluded:
+  - xo_ios/proto
+
+identifier_name:
+  excluded:
+    - id
