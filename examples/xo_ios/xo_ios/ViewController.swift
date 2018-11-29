@@ -10,12 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let gameHandler = XORequestHandler()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let handler = XORequestHandler()
+    }
 
-        handler.createGame(game: UUID().uuidString)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let createGameModal = segue.destination as? CreateGameViewController {
+            createGameModal.XOGameHandler = self.gameHandler
+        }
     }
 
 }

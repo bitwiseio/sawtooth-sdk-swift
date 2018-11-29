@@ -34,11 +34,15 @@ class XORequestHandler {
         self.api = XOApi(url: url)
     }
 
-    func createGame(game: String) {
+    func createGame(game: String, completion: @escaping ((String) -> Void)) {
         self.gameName = game
         let createGameTransaction = makeTransaction(game: game, action: "create", space: "")
         let (batchList, batchID) = makeBatchList(transactions: [createGameTransaction])
-        api.postRequest(batchList: batchList, batchId: batchID)
+        DispatchQueue.main.async {
+            self.api.postRequest(batchList: batchList, batchId: batchID, completion: {statusMessage in
+                completion(statusMessage)
+            })
+        }
     }
 
     func makeTransaction(game: String, action: String, space: String) -> Transaction {
