@@ -20,6 +20,7 @@ import Foundation
 
 class XOApi {
     let url: String
+
     init(url: String) {
         self.url = url
     }
@@ -56,7 +57,7 @@ class XOApi {
         }
     }
 
-    public func postRequest(batchList: BatchList, batchId: String) {
+    public func postRequest(batchList: BatchList, batchId: String, completion: @escaping ((String) -> Void)) {
         let postBatch = URL(string: self.url + "/batches")!
         var postUrlRequest = URLRequest(url: postBatch)
         postUrlRequest.setValue("application/octet-stream", forHTTPHeaderField: "Content-Type")
@@ -75,8 +76,11 @@ class XOApi {
             }
             if let httpResponse = response as? HTTPURLResponse {
                 if httpResponse.statusCode == 202 {
-                    print("Transaction Submitted")
-                    self.getBatchStatus(batchID: batchId, wait: 10)
+                    self.getBatchStatus(batchID: batchId, wait: 5, completion: {statusMessage in
+                        DispatchQueue.main.async {
+                            completion(statusMessage)
+                        }
+                    })
                 }
             } else {
                 return
@@ -84,7 +88,7 @@ class XOApi {
         }.resume()
     }
 
-    private func getBatchStatus(batchID: String, wait: Int) {
+    private func getBatchStatus(batchID: String, wait: Int, completion: @escaping ((String) -> Void)) {
         let batchStatuses = URL(string: self.url + "/batch_statuses?id=\(batchID)&wait=\(wait)")!
         URLSession.shared.dataTask(with: batchStatuses) {(data, response, error) in
             if error != nil {
@@ -106,7 +110,9 @@ class XOApi {
                             return
                         }
                         let batchStatus = dataArray.compactMap(BatchStatus.init)[0]
-                        self.handleBatchStatus(batchStatus: batchStatus)
+                        DispatchQueue.main.async {
+                            completion(self.handleBatchStatus(batchStatus: batchStatus))
+                        }
                     } catch let parsingError {
                         print("Error", parsingError)
                     }
@@ -118,20 +124,25 @@ class XOApi {
         }.resume()
     }
 
-    private func handleBatchStatus(batchStatus: BatchStatus) {
+    private func handleBatchStatus(batchStatus: BatchStatus) -> String {
         switch batchStatus.status {
         case BatchStatusEnum.invalid:
             let invalidTransaction = batchStatus.invalidTransactions[0]
             print(invalidTransaction.message)
             print("Invalid Transaction ID: \(invalidTransaction.id)")
+            return invalidTransaction.message
         case BatchStatusEnum.committed:
             print("Game Successfully Created!")
+            return "Game Succesfully Created!"
         case BatchStatusEnum.pending:
             print("Batch Pending")
+            return "Batch Pending"
         case BatchStatusEnum.unknown:
             print("Batch Status Unknown")
+            return "Batch Status Unknown"
         case BatchStatusEnum.unhandled:
             print("Unhandled status")
+            return "Unhandled Status"
         }
     }
 }
