@@ -40,6 +40,7 @@
 		E094CF1A21ADBA3C00897161 /* secp256k1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E00464BF21ADA93400328068 /* secp256k1.framework */; };
 		E094CF1B21ADBA3C00897161 /* secp256k1.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E00464BF21ADA93400328068 /* secp256k1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E0A28B15219E08AC00621997 /* SwiftProtobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A28B14219E08AC00621997 /* SwiftProtobuf.framework */; };
+		E0AB75A821AF4619006C5CBE /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E0AB75A721AF4619006C5CBE /* Settings.bundle */; };
 		E0D645D521AD9CD300F14B2C /* SawtoothSigning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0D645D421AD9CD300F14B2C /* SawtoothSigning.framework */; };
 		E0D645D621AD9CD300F14B2C /* SawtoothSigning.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E0D645D421AD9CD300F14B2C /* SawtoothSigning.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E0D64A9221A8DAA800A5E81C /* CreateGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D64A9121A8DAA800A5E81C /* CreateGameViewController.swift */; };
@@ -97,6 +98,7 @@
 		E0935EC7219F8F520029E2CC /* client_peers.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = client_peers.pb.swift; sourceTree = "<group>"; };
 		E0935EC8219F8F520029E2CC /* client_state.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = client_state.pb.swift; sourceTree = "<group>"; };
 		E0A28B14219E08AC00621997 /* SwiftProtobuf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftProtobuf.framework; path = Carthage/Build/iOS/SwiftProtobuf.framework; sourceTree = "<group>"; };
+		E0AB75A721AF4619006C5CBE /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		E0D645D421AD9CD300F14B2C /* SawtoothSigning.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SawtoothSigning.framework; sourceTree = "<group>"; };
 		E0D64A9121A8DAA800A5E81C /* CreateGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGameViewController.swift; sourceTree = "<group>"; };
 		E0D89A5E21A5AFD700623CDA /* XORequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XORequestHandler.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				0654C7E4219B80FE000CF770 /* ViewController.swift */,
 				0654C7E6219B80FE000CF770 /* Main.storyboard */,
 				E0D64A9121A8DAA800A5E81C /* CreateGameViewController.swift */,
+				E0AB75A721AF4619006C5CBE /* Settings.bundle */,
 				0654C7E9219B80FF000CF770 /* Assets.xcassets */,
 				0654C7EB219B80FF000CF770 /* LaunchScreen.storyboard */,
 				E0D89A5E21A5AFD700623CDA /* XORequestHandler.swift */,
@@ -255,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0AB75A821AF4619006C5CBE /* Settings.bundle in Resources */,
 				0654C7ED219B80FF000CF770 /* LaunchScreen.storyboard in Resources */,
 				0654C7EA219B80FF000CF770 /* Assets.xcassets in Resources */,
 				0654C7E8219B80FE000CF770 /* Main.storyboard in Resources */,

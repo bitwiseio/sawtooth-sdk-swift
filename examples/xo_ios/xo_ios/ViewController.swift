@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        registerSettings()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -23,4 +24,8 @@ class ViewController: UIViewController {
         }
     }
 
+    func registerSettings() {
+        let appDefaults = [String: Any]()
+        UserDefaults.standard.register(defaults: appDefaults)
+    }
 }
