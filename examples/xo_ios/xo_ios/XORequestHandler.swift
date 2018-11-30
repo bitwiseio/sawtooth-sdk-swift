@@ -31,7 +31,7 @@ class XORequestHandler {
         let context = Secp256k1Context()
         let privateKey = context.newRandomPrivateKey()
         self.signer = Signer(context: context, privateKey: privateKey)
-        self.api = XOApi(url: url)
+        self.api = XOApi()
     }
 
     func createGame(game: String, completion: @escaping ((String) -> Void)) {
@@ -39,7 +39,7 @@ class XORequestHandler {
         let createGameTransaction = makeTransaction(game: game, action: "create", space: "")
         let (batchList, batchID) = makeBatchList(transactions: [createGameTransaction])
         DispatchQueue.main.async {
-            self.api.postRequest(batchList: batchList, batchId: batchID, completion: {statusMessage in
+            self.api.postRequest(url: self.url, batchList: batchList, batchId: batchID, completion: {statusMessage in
                 completion(statusMessage)
             })
         }

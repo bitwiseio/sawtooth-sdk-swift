@@ -19,10 +19,8 @@
 import Foundation
 
 class XOApi {
-    let url: String
 
-    init(url: String) {
-        self.url = url
+    init() {
     }
 
     enum BatchStatusEnum: String {
@@ -57,8 +55,11 @@ class XOApi {
         }
     }
 
-    public func postRequest(batchList: BatchList, batchId: String, completion: @escaping ((String) -> Void)) {
-        let postBatch = URL(string: self.url + "/batches")!
+    public func postRequest(url: String,
+                            batchList: BatchList,
+                            batchId: String,
+                            completion: @escaping ((String) -> Void)) {
+        let postBatch = URL(string: url + "/batches")!
         var postUrlRequest = URLRequest(url: postBatch)
         postUrlRequest.setValue("application/octet-stream", forHTTPHeaderField: "Content-Type")
         postUrlRequest.httpMethod = "POST"
@@ -76,7 +77,7 @@ class XOApi {
             }
             if let httpResponse = response as? HTTPURLResponse {
                 if httpResponse.statusCode == 202 {
-                    self.getBatchStatus(batchID: batchId, wait: 5, completion: {statusMessage in
+                    self.getBatchStatus(url: url, batchID: batchId, wait: 5, completion: {statusMessage in
                         DispatchQueue.main.async {
                             completion(statusMessage)
                         }
@@ -88,8 +89,11 @@ class XOApi {
         }.resume()
     }
 
-    private func getBatchStatus(batchID: String, wait: Int, completion: @escaping ((String) -> Void)) {
-        let batchStatuses = URL(string: self.url + "/batch_statuses?id=\(batchID)&wait=\(wait)")!
+    private func getBatchStatus(url: String,
+                                batchID: String,
+                                wait: Int,
+                                completion: @escaping ((String) -> Void)) {
+        let batchStatuses = URL(string: url + "/batch_statuses?id=\(batchID)&wait=\(wait)")!
         URLSession.shared.dataTask(with: batchStatuses) {(data, response, error) in
             if error != nil {
                 print(error!.localizedDescription)
