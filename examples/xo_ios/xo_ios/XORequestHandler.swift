@@ -21,7 +21,7 @@ import CommonCrypto
 import SawtoothSigning
 
 class XORequestHandler {
-    let url: String = "http://localhost:8080"
+    var url: String = "http://localhost:8080"
     var gameName: String
     private var signer: Signer
     private var api: XOApi
@@ -32,6 +32,10 @@ class XORequestHandler {
         let privateKey = context.newRandomPrivateKey()
         self.signer = Signer(context: context, privateKey: privateKey)
         self.api = XOApi()
+    }
+
+    func setUrl(url: String) {
+        self.url = url
     }
 
     func createGame(game: String, completion: @escaping ((String) -> Void)) {
