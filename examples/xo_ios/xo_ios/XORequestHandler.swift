@@ -22,12 +22,10 @@ import SawtoothSigning
 
 class XORequestHandler {
     var url: String = "http://localhost:8080"
-    var gameName: String
     private var signer: Signer
     private var api: XOApi
 
     init() {
-        self.gameName = ""
         let context = Secp256k1Context()
         let privateKey = context.newRandomPrivateKey()
         self.signer = Signer(context: context, privateKey: privateKey)
@@ -48,7 +46,6 @@ class XORequestHandler {
     }
 
     func createGame(game: String, completion: @escaping ((String) -> Void)) {
-        self.gameName = game
         let createGameTransaction = makeTransaction(game: game, action: "create", space: "")
         let (batchList, batchID) = makeBatchList(transactions: [createGameTransaction])
         DispatchQueue.main.async {
