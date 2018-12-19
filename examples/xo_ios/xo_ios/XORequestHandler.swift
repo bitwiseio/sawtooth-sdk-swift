@@ -38,6 +38,15 @@ class XORequestHandler {
         self.url = url
     }
 
+    func listGames(completion: @escaping (([String: Any]) -> Void)) {
+        let xoPrefix = String(hash(item: "xo").prefix(6))
+        DispatchQueue.main.async {
+            self.api.getState(url: self.url, address: xoPrefix, completion: {response in
+                completion(response)
+            })
+        }
+    }
+
     func createGame(game: String, completion: @escaping ((String) -> Void)) {
         self.gameName = game
         let createGameTransaction = makeTransaction(game: game, action: "create", space: "")
