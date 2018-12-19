@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		060923A321B198F300A73B66 /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060923A221B198F300A73B66 /* GameTableViewCell.swift */; };
 		0654C7E3219B80FE000CF770 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654C7E2219B80FE000CF770 /* AppDelegate.swift */; };
 		0654C7E8219B80FE000CF770 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0654C7E6219B80FE000CF770 /* Main.storyboard */; };
 		0654C7EA219B80FF000CF770 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0654C7E9219B80FF000CF770 /* Assets.xcassets */; };
@@ -65,6 +66,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		060923A221B198F300A73B66 /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
 		0654C7DF219B80FE000CF770 /* xo_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xo_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0654C7E2219B80FE000CF770 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0654C7E4219B80FE000CF770 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		0654C7E1219B80FE000CF770 /* xo_ios */ = {
 			isa = PBXGroup;
 			children = (
+				060923A221B198F300A73B66 /* GameTableViewCell.swift */,
 				0654C7E2219B80FE000CF770 /* AppDelegate.swift */,
 				0654C7E4219B80FE000CF770 /* ViewController.swift */,
 				0654C7E6219B80FE000CF770 /* Main.storyboard */,
@@ -315,6 +318,7 @@
 			files = (
 				E0935EDD219F8F8D0029E2CC /* state_context.pb.swift in Sources */,
 				E0935ECF219F8F670029E2CC /* client_event.pb.swift in Sources */,
+				060923A321B198F300A73B66 /* GameTableViewCell.swift in Sources */,
 				E0935ED9219F8F830029E2CC /* client_batch_submit.pb.swift in Sources */,
 				E0935ECA219F8F590029E2CC /* network.pb.swift in Sources */,
 				E0935EDA219F8F850029E2CC /* client_receipt.pb.swift in Sources */,
