@@ -149,4 +149,38 @@ class XOApi {
             return "Unhandled Status"
         }
     }
+
+    public func getState(url: String, address: String, completion: @escaping (([String: Any]) -> Void)) {
+        let stateResponse = URL(string: url + "/state?address=\(address)")!
+        URLSession.shared.dataTask(with: stateResponse) {(data, response, error) in
+            if error != nil {
+                print(error!.localizedDescription)
+            }
+            guard let data = data else {
+                return
+            }
+            if let httpResponse = response as? HTTPURLResponse {
+                if httpResponse.statusCode == 200 {
+                    do {
+                        let jsonResponse = try JSONSerialization.jsonObject(with: data, options: [])
+                        DispatchQueue.main.async {
+                            completion(self.parseState(response: jsonResponse))
+                        }
+                    } catch let parsingError {
+                        print("Error", parsingError)
+                    }
+                }
+            } else {
+                print("Error parsing batch status response")
+            }
+            }.resume()
+    }
+
+    private func parseState(response: Any) -> [String: Any] {
+        guard let response = response as? [String: Any] else {
+            print("Unable to deserialize state data")
+            return [:]
+        }
+        return response
+    }
 }
