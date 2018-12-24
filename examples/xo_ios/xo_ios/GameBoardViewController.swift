@@ -30,7 +30,6 @@ class GameBoardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.gameNameLabel?.text = game?.name
-        self.gameStateLabel?.text = (game?.gameState)?.rawValue
         updateBoard()
     }
 
@@ -58,11 +57,26 @@ class GameBoardViewController: UIViewController {
         guard let button = sender as? UIButton else {
             return
         }
-        NSLog("Button \(button.tag) pressed")
+        let alert = UIAlertController(title: "Transaction Submitted",
+                                      message: "Transaction Submitted",
+                                      preferredStyle: .alert)
+        XOGameHandler?.takeSpace(game: (self.game?.name)!, space: String(button.tag), completion: {status in
+            alert.message = status
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK",
+                                                                   comment: "Default action"),
+                                          style: .default,
+                                          handler: {_ in
+                                            NSLog("The \"OK\" alert occurred.")
+                                            self.updateBoard()
+            }))
+            self.present(alert, animated: true, completion: nil)
+            self.updateGame()
+        })
     }
 
     private func updateBoard() {
         updateGame()
+        self.gameStateLabel?.text = (game?.gameState)?.rawValue
         let gameBoardStringArray = Array((game?.board)!)
         for button in gameBoardButtons! {
             button.setTitle(String(gameBoardStringArray[button.tag - 1]), for: .normal)

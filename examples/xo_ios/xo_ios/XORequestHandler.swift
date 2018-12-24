@@ -64,6 +64,16 @@ class XORequestHandler {
         }
     }
 
+    func takeSpace(game: String, space: String, completion: @escaping ((String) -> Void)) {
+        let takeSpaceTransaction = makeTransaction(game: game, action: "take", space: space)
+        let (batchList, batchID) = makeBatchList(transactions: [takeSpaceTransaction])
+        DispatchQueue.main.async {
+            self.api.postRequest(url: self.url, batchList: batchList, batchId: batchID, completion: {statusMessage in
+                completion(statusMessage)
+            })
+        }
+    }
+
     func makeTransaction(game: String, action: String, space: String) -> Transaction {
         let transactionAddress = makeAddress(name: game)
         let payloadString = "\(game),\(action),\(space)"
