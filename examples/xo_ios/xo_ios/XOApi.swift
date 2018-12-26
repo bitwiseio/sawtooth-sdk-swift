@@ -136,8 +136,8 @@ class XOApi {
             print("Invalid Transaction ID: \(invalidTransaction.id)")
             return invalidTransaction.message
         case BatchStatusEnum.committed:
-            print("Game Successfully Created!")
-            return "Game Succesfully Created!"
+            print("Batch Successfully Committed!")
+            return "Batch Successfully Committed!"
         case BatchStatusEnum.pending:
             print("Batch Pending")
             return "Batch Pending"
