@@ -17,6 +17,7 @@
 //
 
 import Foundation
+import os
 import CommonCrypto
 import SawtoothSigning
 
@@ -64,6 +65,16 @@ class XORequestHandler {
         }
     }
 
+    func takeSpace(game: String, space: String, completion: @escaping ((String) -> Void)) {
+        let takeSpaceTransaction = makeTransaction(game: game, action: "take", space: space)
+        let (batchList, batchID) = makeBatchList(transactions: [takeSpaceTransaction])
+        DispatchQueue.main.async {
+            self.api.postRequest(url: self.url, batchList: batchList, batchId: batchID, completion: {statusMessage in
+                completion(statusMessage)
+            })
+        }
+    }
+
     func makeTransaction(game: String, action: String, space: String) -> Transaction {
         let transactionAddress = makeAddress(name: game)
         let payloadString = "\(game),\(action),\(space)"
@@ -86,7 +97,7 @@ class XORequestHandler {
             let signature = signer.sign(data: signatureData)
             transaction.headerSignature = signature
         } catch {
-            print("Unable to serialize data")
+            os_log("Unable to serialize data")
         }
         transaction.payload = payloadData!
         return transaction
@@ -105,7 +116,7 @@ class XORequestHandler {
             let signature = signer.sign(data: signatureData)
             batch.headerSignature = signature
         } catch {
-            print("Unable to serialize data")
+            os_log("Unable to serialize data")
         }
         batch.transactions = transactions
         var batchList = BatchList()

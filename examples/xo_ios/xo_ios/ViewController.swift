@@ -17,6 +17,7 @@
 //
 
 import UIKit
+import os
 
 class ViewController: UITableViewController {
 
@@ -49,7 +50,7 @@ class ViewController: UITableViewController {
             gameBoardView.XOGameHandler = self.gameHandler
             gameBoardView.game = selectedGame
         case _:
-            print("Unknown segue")
+            os_log("Unknown segue")
         }
     }
 

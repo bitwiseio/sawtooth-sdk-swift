@@ -17,6 +17,7 @@
 //
 
 import UIKit
+import os
 
 class GameBoardViewController: UIViewController {
 
@@ -30,17 +31,16 @@ class GameBoardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.gameNameLabel?.text = game?.name
-        self.gameStateLabel?.text = (game?.gameState)?.rawValue
         updateBoard()
     }
 
     @IBAction func gameBoardRefresh(_ sender: UIBarButtonItem) {
-        NSLog("Refresh Button")
+        os_log("Refresh Button")
         updateBoard()
     }
 
     @IBAction func gameBoardInfo(_ sender: UIButton) {
-        NSLog("Info Button")
+        os_log("Info Button")
         let playersString = "Player 1: \(game?.playerKey1 ?? "")\nPlayer 2: \(game?.playerKey2 ?? "")"
         let alert = UIAlertController(title: "Players",
                                       message: playersString,
@@ -49,7 +49,7 @@ class GameBoardViewController: UIViewController {
                                                                comment: "Default action"),
                                       style: .default,
                                       handler: { _ in
-                                        NSLog("The \"OK\" alert occurred.")
+                                        os_log("The \"OK\" alert occurred.")
         }))
         self.present(alert, animated: true, completion: nil)
     }
@@ -58,11 +58,26 @@ class GameBoardViewController: UIViewController {
         guard let button = sender as? UIButton else {
             return
         }
-        NSLog("Button \(button.tag) pressed")
+        let alert = UIAlertController(title: "Transaction Submitted",
+                                      message: "Transaction Submitted",
+                                      preferredStyle: .alert)
+        XOGameHandler?.takeSpace(game: (self.game?.name)!, space: String(button.tag), completion: {status in
+            alert.message = status
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK",
+                                                                   comment: "Default action"),
+                                          style: .default,
+                                          handler: {_ in
+                                            os_log("The \"OK\" alert occurred.")
+                                            self.updateBoard()
+            }))
+            self.present(alert, animated: true, completion: nil)
+            self.updateGame()
+        })
     }
 
     private func updateBoard() {
         updateGame()
+        self.gameStateLabel?.text = (game?.gameState)?.rawValue
         let gameBoardStringArray = Array((game?.board)!)
         for button in gameBoardButtons! {
             button.setTitle(String(gameBoardStringArray[button.tag - 1]), for: .normal)
