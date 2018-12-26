@@ -69,4 +69,40 @@ class SawtoothSigningTests: XCTestCase {
         XCTAssertEqual(actualSignature, expectedSignature)
         secp256k1_context_destroy(ctx)
     }
+
+    /// Test that a context can verify when a signature is valid."
+    func testVerify() {
+        let ctx = secp256k1_context_create(UInt32(SECP256K1_CONTEXT_SIGN))
+        let context = Secp256k1Context()
+
+        let privateKey = Secp256k1PrivateKey.fromHex(
+            hexPrivKey: "80378f103c7f1ea5856d50f2dcdf38b97da5986e9b32297be2de3c8444c38c08")
+        let signer = Signer(context: context, privateKey: privateKey)
+        let message: [UInt8] = Array("Hello, Alice, this is Bob.".utf8)
+
+        let actualSignature = signer.sign(data: message)
+        let result = context.verify(signature: actualSignature, data: message, publicKey: signer.getPublicKey())
+
+        XCTAssertTrue(result)
+        secp256k1_context_destroy(ctx)
+    }
+
+    /// Test that a context can verify when a signature is invalid"
+    func testVerifyError() {
+        let ctx = secp256k1_context_create(UInt32(SECP256K1_CONTEXT_SIGN))
+        let context = Secp256k1Context()
+        let privateKey = Secp256k1PrivateKey.fromHex(
+            hexPrivKey: "80378f103c7f1ea5856d50f2dcdf38b97da5986e9b32297be2de3c8444c38c08")
+        let signer = Signer(context: context, privateKey: privateKey)
+        let message: [UInt8] = Array("Hello, Alice, this is Bob.".utf8)
+
+         // This signature doesn't match for message
+        let signature =  """
+            d589c7b1fa5f8a4c5a389de80ae9582c2f7f2a5\
+            e21bab5450b670214e5b1c1235e9eb8102fd0ca690a8b42e2c406a682bd57f6daf6e142e5fa4b2c26ef40a490
+        """
+        let result = context.verify(signature: signature, data: message, publicKey: signer.getPublicKey())
+        XCTAssertFalse(result)
+        secp256k1_context_destroy(ctx)
+    }
 }
