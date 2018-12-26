@@ -37,8 +37,19 @@ class ViewController: UITableViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let createGameModal = segue.destination as? CreateGameViewController {
+        switch segue.identifier {
+        // swiftlint:disable force_cast
+        case "createGameSegue":
+            let createGameModal = segue.destination as! CreateGameViewController
             createGameModal.XOGameHandler = self.gameHandler
+        case "gameBoardSegue":
+            let gameBoardView = segue.destination as! GameBoardViewController
+            let row = self.tableView.indexPathForSelectedRow?.row
+            let selectedGame = games[row!]
+            gameBoardView.XOGameHandler = self.gameHandler
+            gameBoardView.game = selectedGame
+        case _:
+            print("Unknown segue")
         }
     }
 

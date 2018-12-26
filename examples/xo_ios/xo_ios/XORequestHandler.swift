@@ -45,6 +45,15 @@ class XORequestHandler {
         }
     }
 
+    func getGame(game: String, completion: @escaping (([String: Any]) -> Void)) {
+        let gameAddress = makeAddress(name: game)
+        DispatchQueue.main.async {
+            self.api.getState(url: self.url, address: gameAddress, completion: {response in
+                completion(response)
+            })
+        }
+    }
+
     func createGame(game: String, completion: @escaping ((String) -> Void)) {
         let createGameTransaction = makeTransaction(game: game, action: "create", space: "")
         let (batchList, batchID) = makeBatchList(transactions: [createGameTransaction])
