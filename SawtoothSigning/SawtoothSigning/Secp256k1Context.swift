@@ -51,7 +51,26 @@ public class Secp256k1Context: Context {
     }
 
     public func verify(signature: String, data: [UInt8], publicKey: PublicKey) -> Bool {
-        fatalError("Not implemented")
+        let ctx = secp256k1_context_create(UInt32(SECP256K1_CONTEXT_VERIFY))
+
+        var sig = secp256k1_ecdsa_signature()
+        secp256k1_ecdsa_signature_parse_compact(ctx!, &sig, signature.toBytes)
+
+        var pubKey = secp256k1_pubkey()
+        _ = secp256k1_ec_pubkey_parse(ctx!, &pubKey, publicKey.getBytes(), publicKey.getBytes().count)
+
+        let msgDigest = hash(data: data)
+        let result = msgDigest.withUnsafeBytes { (msgDigestBytes) -> Int32 in
+            return secp256k1_ecdsa_verify(ctx!, &sig, msgDigestBytes, &pubKey)
+        }
+
+        secp256k1_context_destroy(ctx)
+
+        if result == 1 {
+            return true
+        } else {
+            return false
+        }
     }
 
     public func getPublicKey(privateKey: PrivateKey) -> PublicKey {
