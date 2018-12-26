@@ -17,6 +17,7 @@
 //
 
 import UIKit
+import os
 
 class GameBoardViewController: UIViewController {
 
@@ -34,12 +35,12 @@ class GameBoardViewController: UIViewController {
     }
 
     @IBAction func gameBoardRefresh(_ sender: UIBarButtonItem) {
-        NSLog("Refresh Button")
+        os_log("Refresh Button")
         updateBoard()
     }
 
     @IBAction func gameBoardInfo(_ sender: UIButton) {
-        NSLog("Info Button")
+        os_log("Info Button")
         let playersString = "Player 1: \(game?.playerKey1 ?? "")\nPlayer 2: \(game?.playerKey2 ?? "")"
         let alert = UIAlertController(title: "Players",
                                       message: playersString,
@@ -48,7 +49,7 @@ class GameBoardViewController: UIViewController {
                                                                comment: "Default action"),
                                       style: .default,
                                       handler: { _ in
-                                        NSLog("The \"OK\" alert occurred.")
+                                        os_log("The \"OK\" alert occurred.")
         }))
         self.present(alert, animated: true, completion: nil)
     }
@@ -66,7 +67,7 @@ class GameBoardViewController: UIViewController {
                                                                    comment: "Default action"),
                                           style: .default,
                                           handler: {_ in
-                                            NSLog("The \"OK\" alert occurred.")
+                                            os_log("The \"OK\" alert occurred.")
                                             self.updateBoard()
             }))
             self.present(alert, animated: true, completion: nil)

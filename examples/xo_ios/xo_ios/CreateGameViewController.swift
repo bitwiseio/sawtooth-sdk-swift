@@ -17,6 +17,7 @@
 //
 
 import UIKit
+import os
 
 class CreateGameViewController: UIViewController {
 
@@ -53,7 +54,7 @@ class CreateGameViewController: UIViewController {
                                                                    comment: "Default action"),
                                           style: .default,
                                           handler: { _ in
-                NSLog("The \"OK\" alert occurred.")
+                os_log("The \"OK\" alert occurred.")
             }))
             self.present(alert, animated: true, completion: nil)
         }

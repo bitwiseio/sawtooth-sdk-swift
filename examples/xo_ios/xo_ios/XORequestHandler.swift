@@ -17,6 +17,7 @@
 //
 
 import Foundation
+import os
 import CommonCrypto
 import SawtoothSigning
 
@@ -96,7 +97,7 @@ class XORequestHandler {
             let signature = signer.sign(data: signatureData)
             transaction.headerSignature = signature
         } catch {
-            print("Unable to serialize data")
+            os_log("Unable to serialize data")
         }
         transaction.payload = payloadData!
         return transaction
@@ -115,7 +116,7 @@ class XORequestHandler {
             let signature = signer.sign(data: signatureData)
             batch.headerSignature = signature
         } catch {
-            print("Unable to serialize data")
+            os_log("Unable to serialize data")
         }
         batch.transactions = transactions
         var batchList = BatchList()
