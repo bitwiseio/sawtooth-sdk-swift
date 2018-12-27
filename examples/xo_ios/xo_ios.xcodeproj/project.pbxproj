@@ -13,6 +13,7 @@
 		0654C7EA219B80FF000CF770 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0654C7E9219B80FF000CF770 /* Assets.xcassets */; };
 		0654C7ED219B80FF000CF770 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0654C7EB219B80FF000CF770 /* LaunchScreen.storyboard */; };
 		478A8B2F21C95A31000D19D0 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478A8B2E21C95A31000D19D0 /* Game.swift */; };
+		47C2217421D41AC500417483 /* GameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C2217321D41AC500417483 /* GameTableViewController.swift */; };
 		E075DD3021C9596F0051C09C /* GameBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E075DD2F21C9596F0051C09C /* GameBoardViewController.swift */; };
 		E0935EC9219F8F560029E2CC /* client_batch.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EB0219F8F520029E2CC /* client_batch.pb.swift */; };
 		E0935ECA219F8F590029E2CC /* network.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EB1219F8F520029E2CC /* network.pb.swift */; };
@@ -76,6 +77,7 @@
 		0654C7EC219B80FF000CF770 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0654C7EE219B80FF000CF770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		478A8B2E21C95A31000D19D0 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		47C2217321D41AC500417483 /* GameTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewController.swift; sourceTree = "<group>"; };
 		E00464BF21ADA93400328068 /* secp256k1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = secp256k1.framework; path = Carthage/Build/iOS/secp256k1.framework; sourceTree = "<group>"; };
 		E075DD2F21C9596F0051C09C /* GameBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardViewController.swift; sourceTree = "<group>"; };
 		E0935EB0219F8F520029E2CC /* client_batch.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = client_batch.pb.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				E0D89A6021A5B2E900623CDA /* XOApi.swift */,
 				0654C7EE219B80FF000CF770 /* Info.plist */,
 				478A8B2E21C95A31000D19D0 /* Game.swift */,
+				47C2217321D41AC500417483 /* GameTableViewController.swift */,
 			);
 			path = xo_ios;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				E0935ECE219F8F640029E2CC /* identity.pb.swift in Sources */,
 				E0D64A9221A8DAA800A5E81C /* CreateGameViewController.swift in Sources */,
 				E0935EDE219F8F900029E2CC /* transaction.pb.swift in Sources */,
+				47C2217421D41AC500417483 /* GameTableViewController.swift in Sources */,
 				E0935ED5219F8F790029E2CC /* genesis.pb.swift in Sources */,
 				0654C7E3219B80FE000CF770 /* AppDelegate.swift in Sources */,
 				E0D89A6121A5B2E900623CDA /* XOApi.swift in Sources */,

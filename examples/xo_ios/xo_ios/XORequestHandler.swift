@@ -25,16 +25,29 @@ class XORequestHandler {
     var url: String = "http://localhost:8080"
     private var signer: Signer
     private var api: XOApi
+    var privateKey: PrivateKey
 
     init() {
+        self.privateKey = XORequestHandler.getPrivateKey()
         let context = Secp256k1Context()
-        let privateKey = context.newRandomPrivateKey()
-        self.signer = Signer(context: context, privateKey: privateKey)
+        self.signer = Signer(context: context, privateKey: self.privateKey)
         self.api = XOApi()
     }
 
     func setUrl(url: String) {
         self.url = url
+    }
+
+    static func getPrivateKey() -> PrivateKey {
+        if let privateKey = UserDefaults.standard.string(forKey: "privateKey") {
+            return Secp256k1PrivateKey.fromHex(hexPrivKey: privateKey)
+        } else {
+            let context = Secp256k1Context()
+            let privateKey = context.newRandomPrivateKey()
+            UserDefaults.standard.set(privateKey.hex(), forKey: "privateKey" )
+            UserDefaults.standard.set(context.getPublicKey(privateKey: privateKey).hex(), forKey: "publicKey" )
+            return privateKey
+        }
     }
 
     func listGames(completion: @escaping (([String: Any]) -> Void)) {
