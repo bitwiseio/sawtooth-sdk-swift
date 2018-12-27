@@ -31,7 +31,7 @@ public protocol Context {
 
         - Returns: Hex encoded signature.
     */
-    func sign(data: [UInt8], privateKey: PrivateKey) -> String
+    func sign(data: [UInt8], privateKey: PrivateKey) throws -> String
 
     /**
         Verify that the private key associated with the public key
@@ -44,7 +44,7 @@ public protocol Context {
      
         - Returns: Whether the signer is verified.
     */
-    func verify(signature: String, data: [UInt8], publicKey: PublicKey) -> Bool
+    func verify(signature: String, data: [UInt8], publicKey: PublicKey) throws -> Bool
 
     /**
         Get the public key associated with the private key.
@@ -54,7 +54,7 @@ public protocol Context {
     
         - Returns: Public key associated with the given private key.
      */
-    func getPublicKey(privateKey: PrivateKey) -> PublicKey
+    func getPublicKey(privateKey: PrivateKey) throws -> PublicKey
 
     /**
         Generate a random private key.
