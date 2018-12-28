@@ -158,6 +158,9 @@ class XOApi {
                 os_log("%@", error!.localizedDescription)
             }
             guard let data = data else {
+                 DispatchQueue.main.async {
+                    completion([:])
+                }
                 return
             }
             if let httpResponse = response as? HTTPURLResponse {

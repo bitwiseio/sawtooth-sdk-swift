@@ -22,7 +22,6 @@ import os
 class ViewController: UITabBarController {
 
     // MARK: Properties
-    var games = [Game]()
     let gameHandler = XORequestHandler()
 
     override func viewDidLoad() {
