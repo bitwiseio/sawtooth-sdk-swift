@@ -6,15 +6,15 @@
 	<dict>
 		<key>Frameworks/secp256k1.framework/Info.plist</key>
 		<data>
-		T1Uo9atsJqpFvvMLa/FZeoKReQs=
+		JWdwVBqP2qLyPi4Yk4j7NCl9EVw=
 		</data>
 		<key>Frameworks/secp256k1.framework/_CodeSignature/CodeResources</key>
 		<data>
-		M0gRbnhBW7kdvH51/VFUIQzq1cY=
+		mUNxL3PzA+/BB6O2A5vdAeapvJ4=
 		</data>
 		<key>Frameworks/secp256k1.framework/secp256k1</key>
 		<data>
-		I0DuApMlZdhL3eqLD0e9whs3XNc=
+		3tkqkCdwPojAlC2BCGMdkapiLOI=
 		</data>
 		<key>Headers/SawtoothSigning-Swift.h</key>
 		<data>
@@ -26,15 +26,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		GdrttNQ1X7nyvusfx3nGn4DElKo=
+		knlebfZ1Tl2g01BAOpSdKCWwH5I=
 		</data>
 		<key>Modules/SawtoothSigning.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		qPqoPBjtDU/6QEKRXSbmgrpprO8=
+		CF9N6MkuQftCBSoDiRozVmvRoI0=
 		</data>
 		<key>Modules/SawtoothSigning.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		2eRbpEYW4/vo5oR6Ksqi+BiuwKQ=
+		OieN/E5ASE30pyneb4MCIs1gmvo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -47,21 +47,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GV62RS6pYO8weydZfKY15HS4+95Ht4m8zhCWnotQev8=
+			5FAnsUME/nK5dUGaCc2F5kSaTW9DPbZbgxT7qtLbqmM=
 			</data>
 		</dict>
 		<key>Frameworks/secp256k1.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UmIjUGK/U1PwMF0gQVZneTTRZJmhgg9rTpR66jXRGP0=
+			yUvLBxlYNBEjKv29AfZLLvfDbSfCF/+xBRIrGjrFHOE=
 			</data>
 		</dict>
 		<key>Frameworks/secp256k1.framework/secp256k1</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bPm9zcvUze35aOG68vRgLS76yWuvr3R+O/X1BUkpBSc=
+			3ah8gzphI006yquD6pA31RLW6Ec2A41fbE7TqBMNXKY=
 			</data>
 		</dict>
 		<key>Headers/SawtoothSigning-Swift.h</key>
@@ -82,14 +82,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			A+bpkPGeUPSdlYe0kfQsw5Q+y43Dryc1/9aijckCgOQ=
+			klEWbAvsdq1jlLS6oJpDiXbmorsiMDkG/cJg1L/ehJg=
 			</data>
 		</dict>
 		<key>Modules/SawtoothSigning.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HfORmSlQobXvIT+3B9OCSpyoSruwDhRhIdya52/63ic=
+			O+eRJJ94hz4mua1NXH3l6P0hLDlbIIfroaT5pBNmSO8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -45,7 +45,12 @@ class XORequestHandler {
             let context = Secp256k1Context()
             let privateKey = context.newRandomPrivateKey()
             UserDefaults.standard.set(privateKey.hex(), forKey: "privateKey" )
-            UserDefaults.standard.set(context.getPublicKey(privateKey: privateKey).hex(), forKey: "publicKey" )
+            do {
+                let pubKey = try context.getPublicKey(privateKey: privateKey)
+                UserDefaults.standard.set(pubKey.hex(), forKey: "publicKey" )
+            } catch {
+                os_log("Error creating public key")
+            }
             return privateKey
         }
     }
@@ -93,8 +98,12 @@ class XORequestHandler {
         let payloadString = "\(game),\(action),\(space)"
         let payloadData: Data? = payloadString.data(using: .utf8)
         var transactionHeader = TransactionHeader()
-        transactionHeader.signerPublicKey = signer.getPublicKey().hex()
-        transactionHeader.batcherPublicKey = signer.getPublicKey().hex()
+        do {
+            transactionHeader.signerPublicKey = try signer.getPublicKey().hex()
+            transactionHeader.batcherPublicKey = try signer.getPublicKey().hex()
+        } catch {
+            os_log("Failed to get signer public key")
+        }
         transactionHeader.familyName = "xo"
         transactionHeader.familyVersion = "1.0"
         transactionHeader.inputs = [transactionAddress]
@@ -107,8 +116,12 @@ class XORequestHandler {
             let transactionHeaderData = try transactionHeader.serializedData()
             transaction.header = transactionHeaderData
             let signatureData = transactionHeaderData.map {UInt8 (littleEndian: $0)}
-            let signature = signer.sign(data: signatureData)
-            transaction.headerSignature = signature
+            do {
+                let signature = try signer.sign(data: signatureData)
+                transaction.headerSignature = signature
+            } catch {
+                os_log("Unexpected error signing batch ")
+            }
         } catch {
             os_log("Unable to serialize data")
         }
@@ -118,7 +131,12 @@ class XORequestHandler {
 
     func makeBatchList(transactions: [Transaction]) -> (BatchList, String) {
         var batchHeader = BatchHeader()
-        batchHeader.signerPublicKey = signer.getPublicKey().hex()
+        do {
+            batchHeader.signerPublicKey = try signer.getPublicKey().hex()
+        } catch {
+            os_log("Failed to get signer public key")
+        }
+
         batchHeader.transactionIds = transactions.map({ $0.headerSignature })
 
         var batch = Batch()
@@ -126,8 +144,12 @@ class XORequestHandler {
             let batchHeaderData = try batchHeader.serializedData()
             batch.header = batchHeaderData
             let signatureData = batchHeaderData.map {UInt8 (littleEndian: $0)}
-            let signature = signer.sign(data: signatureData)
-            batch.headerSignature = signature
+            do {
+                let signature = try signer.sign(data: signatureData)
+                batch.headerSignature = signature
+            } catch {
+                os_log("Unexpected error signing batch")
+            }
         } catch {
             os_log("Unable to serialize data")
         }
