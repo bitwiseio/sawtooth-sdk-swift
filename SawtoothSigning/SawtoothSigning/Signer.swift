@@ -34,8 +34,8 @@ public class Signer {
 
          - Returns: Hex encoded signature.
     */
-    public func sign(data: [UInt8]) -> String {
-        return self.context.sign(data: data, privateKey: self.privateKey)
+    public func sign(data: [UInt8]) throws -> String {
+        return try self.context.sign(data: data, privateKey: self.privateKey)
     }
 
     /**
@@ -43,7 +43,7 @@ public class Signer {
 
         - Returns: Public key associated with the signer's private key.
      */
-    public func getPublicKey() -> PublicKey {
-        return self.context.getPublicKey(privateKey: self.privateKey)
+    public func getPublicKey() throws -> PublicKey {
+        return try self.context.getPublicKey(privateKey: self.privateKey)
     }
 }

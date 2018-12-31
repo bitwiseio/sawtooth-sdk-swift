@@ -45,7 +45,7 @@
 		E094CF1B21ADBA3C00897161 /* secp256k1.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E00464BF21ADA93400328068 /* secp256k1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E0A28B15219E08AC00621997 /* SwiftProtobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A28B14219E08AC00621997 /* SwiftProtobuf.framework */; };
 		E0AB75A821AF4619006C5CBE /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E0AB75A721AF4619006C5CBE /* Settings.bundle */; };
-		E0D645D521AD9CD300F14B2C /* SawtoothSigning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0D645D421AD9CD300F14B2C /* SawtoothSigning.framework */; };
+		E0D645D521AD9CD300F14B2C /* SawtoothSigning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0D645D421AD9CD300F14B2C /* SawtoothSigning.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		E0D645D621AD9CD300F14B2C /* SawtoothSigning.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E0D645D421AD9CD300F14B2C /* SawtoothSigning.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E0D64A9221A8DAA800A5E81C /* CreateGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D64A9121A8DAA800A5E81C /* CreateGameViewController.swift */; };
 		E0D89A5F21A5AFD700623CDA /* XORequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D89A5E21A5AFD700623CDA /* XORequestHandler.swift */; };

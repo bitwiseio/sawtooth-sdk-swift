@@ -39,12 +39,10 @@ class SawtoothSigningTests: XCTestCase {
         var outputLen = 33
         _ = secp256k1_ec_pubkey_serialize(
             ctx!, &pubKeyBytes, &outputLen, &ecKey, UInt32(SECP256K1_EC_COMPRESSED))
-
-        let actualPublicKey = context.getPublicKey(privateKey: privateKey)
-
+        let actualPublicKey = try? context.getPublicKey(privateKey: privateKey)
         let expectedPublicKey = Secp256k1PublicKey(pubKey: pubKeyBytes)
 
-        XCTAssertEqual(actualPublicKey.hex(), expectedPublicKey.hex())
+        XCTAssertEqual(actualPublicKey?.hex(), expectedPublicKey.hex())
         secp256k1_context_destroy(ctx)
     }
 
@@ -58,7 +56,7 @@ class SawtoothSigningTests: XCTestCase {
         let signer = Signer(context: context, privateKey: privateKey)
         let message: [UInt8] = Array("Hello, Alice, this is Bob.".utf8)
 
-        let actualSignature = signer.sign(data: message)
+        let actualSignature = try? signer.sign(data: message)
 
         // This Signature was created with the Python sawtooth_signing library.
         let expectedSignature = """
@@ -80,10 +78,10 @@ class SawtoothSigningTests: XCTestCase {
         let signer = Signer(context: context, privateKey: privateKey)
         let message: [UInt8] = Array("Hello, Alice, this is Bob.".utf8)
 
-        let actualSignature = signer.sign(data: message)
-        let result = context.verify(signature: actualSignature, data: message, publicKey: signer.getPublicKey())
+        let actualSignature = try? signer.sign(data: message)
+        let result = try? context.verify(signature: actualSignature!, data: message, publicKey: signer.getPublicKey())
 
-        XCTAssertTrue(result)
+        XCTAssertTrue(result!)
         secp256k1_context_destroy(ctx)
     }
 
@@ -101,8 +99,8 @@ class SawtoothSigningTests: XCTestCase {
             d589c7b1fa5f8a4c5a389de80ae9582c2f7f2a5\
             e21bab5450b670214e5b1c1235e9eb8102fd0ca690a8b42e2c406a682bd57f6daf6e142e5fa4b2c26ef40a490
         """
-        let result = context.verify(signature: signature, data: message, publicKey: signer.getPublicKey())
-        XCTAssertFalse(result)
+        let result = try? context.verify(signature: signature, data: message, publicKey: signer.getPublicKey())
+        XCTAssertFalse(result!)
         secp256k1_context_destroy(ctx)
     }
 }
