@@ -5,3 +5,4 @@ Table of Contents
    :maxdepth: 2
 
    overview.rst
+   using_ios_sdk.rst
