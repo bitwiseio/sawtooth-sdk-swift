@@ -14,6 +14,10 @@
 		0654C7ED219B80FF000CF770 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0654C7EB219B80FF000CF770 /* LaunchScreen.storyboard */; };
 		478A8B2F21C95A31000D19D0 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478A8B2E21C95A31000D19D0 /* Game.swift */; };
 		47C2217421D41AC500417483 /* GameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C2217321D41AC500417483 /* GameTableViewController.swift */; };
+		47E8212721F63FAE001C6A6B /* SawtoothSigning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E8212621F63FAE001C6A6B /* SawtoothSigning.framework */; };
+		47E8212821F63FAE001C6A6B /* SawtoothSigning.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 47E8212621F63FAE001C6A6B /* SawtoothSigning.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		47E8212A21F63FCF001C6A6B /* secp256k1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E8212921F63FCF001C6A6B /* secp256k1.framework */; };
+		47E8212B21F63FCF001C6A6B /* secp256k1.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 47E8212921F63FCF001C6A6B /* secp256k1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E075DD3021C9596F0051C09C /* GameBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E075DD2F21C9596F0051C09C /* GameBoardViewController.swift */; };
 		E0935EC9219F8F560029E2CC /* client_batch.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EB0219F8F520029E2CC /* client_batch.pb.swift */; };
 		E0935ECA219F8F590029E2CC /* network.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EB1219F8F520029E2CC /* network.pb.swift */; };
@@ -41,12 +45,8 @@
 		E0935EE0219F8F950029E2CC /* client_peers.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EC7219F8F520029E2CC /* client_peers.pb.swift */; };
 		E0935EE1219F8F980029E2CC /* client_state.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0935EC8219F8F520029E2CC /* client_state.pb.swift */; };
 		E0935EE221A1DA840029E2CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654C7E4219B80FE000CF770 /* ViewController.swift */; };
-		E094CF1A21ADBA3C00897161 /* secp256k1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E00464BF21ADA93400328068 /* secp256k1.framework */; };
-		E094CF1B21ADBA3C00897161 /* secp256k1.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E00464BF21ADA93400328068 /* secp256k1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E0A28B15219E08AC00621997 /* SwiftProtobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A28B14219E08AC00621997 /* SwiftProtobuf.framework */; };
 		E0AB75A821AF4619006C5CBE /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E0AB75A721AF4619006C5CBE /* Settings.bundle */; };
-		E0D645D521AD9CD300F14B2C /* SawtoothSigning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0D645D421AD9CD300F14B2C /* SawtoothSigning.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		E0D645D621AD9CD300F14B2C /* SawtoothSigning.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E0D645D421AD9CD300F14B2C /* SawtoothSigning.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E0D64A9221A8DAA800A5E81C /* CreateGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D64A9121A8DAA800A5E81C /* CreateGameViewController.swift */; };
 		E0D89A5F21A5AFD700623CDA /* XORequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D89A5E21A5AFD700623CDA /* XORequestHandler.swift */; };
 		E0D89A6121A5B2E900623CDA /* XOApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D89A6021A5B2E900623CDA /* XOApi.swift */; };
@@ -59,8 +59,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E0D645D621AD9CD300F14B2C /* SawtoothSigning.framework in Embed Frameworks */,
-				E094CF1B21ADBA3C00897161 /* secp256k1.framework in Embed Frameworks */,
+				47E8212821F63FAE001C6A6B /* SawtoothSigning.framework in Embed Frameworks */,
+				47E8212B21F63FCF001C6A6B /* secp256k1.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,7 +78,8 @@
 		0654C7EE219B80FF000CF770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		478A8B2E21C95A31000D19D0 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		47C2217321D41AC500417483 /* GameTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewController.swift; sourceTree = "<group>"; };
-		E00464BF21ADA93400328068 /* secp256k1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = secp256k1.framework; path = Carthage/Build/iOS/secp256k1.framework; sourceTree = "<group>"; };
+		47E8212621F63FAE001C6A6B /* SawtoothSigning.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SawtoothSigning.framework; path = Carthage/Build/iOS/SawtoothSigning.framework; sourceTree = "<group>"; };
+		47E8212921F63FCF001C6A6B /* secp256k1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = secp256k1.framework; path = Carthage/Build/iOS/secp256k1.framework; sourceTree = "<group>"; };
 		E075DD2F21C9596F0051C09C /* GameBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardViewController.swift; sourceTree = "<group>"; };
 		E0935EB0219F8F520029E2CC /* client_batch.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = client_batch.pb.swift; sourceTree = "<group>"; };
 		E0935EB1219F8F520029E2CC /* network.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = network.pb.swift; sourceTree = "<group>"; };
@@ -119,8 +120,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0A28B15219E08AC00621997 /* SwiftProtobuf.framework in Frameworks */,
-				E0D645D521AD9CD300F14B2C /* SawtoothSigning.framework in Frameworks */,
-				E094CF1A21ADBA3C00897161 /* secp256k1.framework in Frameworks */,
+				47E8212A21F63FCF001C6A6B /* secp256k1.framework in Frameworks */,
+				47E8212721F63FAE001C6A6B /* SawtoothSigning.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +131,8 @@
 		0654C7D6219B80FE000CF770 = {
 			isa = PBXGroup;
 			children = (
+				47E8212921F63FCF001C6A6B /* secp256k1.framework */,
+				47E8212621F63FAE001C6A6B /* SawtoothSigning.framework */,
 				E0935EAF219F8F520029E2CC /* proto */,
 				0654C7E1219B80FE000CF770 /* xo_ios */,
 				0654C7E0219B80FE000CF770 /* Products */,
@@ -202,7 +205,6 @@
 		E0A28B13219E08AC00621997 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E00464BF21ADA93400328068 /* secp256k1.framework */,
 				E0D645D421AD9CD300F14B2C /* SawtoothSigning.framework */,
 				E0A28B14219E08AC00621997 /* SwiftProtobuf.framework */,
 			);
@@ -502,6 +504,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7479JV98V5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -513,7 +516,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "bitwiseio.xo-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = "eloafran.xo-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -525,6 +528,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7479JV98V5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -537,7 +541,7 @@
 					"@executable_path/Frameworks",
 				);
 				"LIBRARY_SEARCH_PATHS[arch=*]" = proto;
-				PRODUCT_BUNDLE_IDENTIFIER = "bitwiseio.xo-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = "eloafran.xo-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
