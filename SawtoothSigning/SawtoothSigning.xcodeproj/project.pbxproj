@@ -7,139 +7,141 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06635190219CDC1B003E22B4 /* SawtoothSigning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06635186219CDC1B003E22B4 /* SawtoothSigning.framework */; };
-		06635195219CDC1B003E22B4 /* SawtoothSigningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06635194219CDC1B003E22B4 /* SawtoothSigningTests.swift */; };
-		06635197219CDC1B003E22B4 /* SawtoothSigning.h in Headers */ = {isa = PBXBuildFile; fileRef = 06635189219CDC1B003E22B4 /* SawtoothSigning.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		066351A1219CDDCA003E22B4 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066351A0219CDDCA003E22B4 /* Context.swift */; };
-		066351A3219CE21F003E22B4 /* Secp256k1Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066351A2219CE21F003E22B4 /* Secp256k1Context.swift */; };
-		06757BFB219DF12D00BB8470 /* CryptoFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06757BFA219DF12D00BB8470 /* CryptoFactory.swift */; };
-		06757BFD219DF1A100BB8470 /* PrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06757BFC219DF1A100BB8470 /* PrivateKey.swift */; };
-		06757BFF219DF1BA00BB8470 /* PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06757BFE219DF1BA00BB8470 /* PublicKey.swift */; };
-		06757C01219DF1E000BB8470 /* Secp256k1PrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06757C00219DF1E000BB8470 /* Secp256k1PrivateKey.swift */; };
-		06757C03219DF20400BB8470 /* Secp256k1PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06757C02219DF20400BB8470 /* Secp256k1PublicKey.swift */; };
-		06757C05219DF21400BB8470 /* Signer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06757C04219DF21400BB8470 /* Signer.swift */; };
-		06757C09219DFDF500BB8470 /* secp256k1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06757C08219DFDF500BB8470 /* secp256k1.framework */; };
-		06757C0B219F52B800BB8470 /* Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06757C0A219F52B800BB8470 /* Encoding.swift */; };
-		06BEB54721A4B00900C6724C /* secp256k1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06757C08219DFDF500BB8470 /* secp256k1.framework */; };
-		06BEB54B21A4C02B00C6724C /* secp256k1.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 06757C08219DFDF500BB8470 /* secp256k1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		47C2217621D5294800417483 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C2217521D5294800417483 /* Error.swift */; };
+		4700C78C21EFDCC40074E7E4 /* SawtoothSigning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4700C78221EFDCC40074E7E4 /* SawtoothSigning.framework */; };
+		4700C79121EFDCC40074E7E4 /* SawtoothSigningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4700C79021EFDCC40074E7E4 /* SawtoothSigningTests.swift */; };
+		4700C79321EFDCC40074E7E4 /* SawtoothSigning.h in Headers */ = {isa = PBXBuildFile; fileRef = 4700C78521EFDCC40074E7E4 /* SawtoothSigning.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4700C79D21EFDEB90074E7E4 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4700C79C21EFDEB90074E7E4 /* Context.swift */; };
+		4700C79F21EFDEE70074E7E4 /* Secp256k1Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4700C79E21EFDEE70074E7E4 /* Secp256k1Context.swift */; };
+		4700C7A121EFDF040074E7E4 /* CryptoFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4700C7A021EFDF040074E7E4 /* CryptoFactory.swift */; };
+		4700C7A321EFDF200074E7E4 /* PrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4700C7A221EFDF200074E7E4 /* PrivateKey.swift */; };
+		4700C7A521EFDF3D0074E7E4 /* PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4700C7A421EFDF3D0074E7E4 /* PublicKey.swift */; };
+		4700C7A721EFDF650074E7E4 /* Secp256k1PrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4700C7A621EFDF650074E7E4 /* Secp256k1PrivateKey.swift */; };
+		4700C7A921EFDF830074E7E4 /* Secp256k1PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4700C7A821EFDF830074E7E4 /* Secp256k1PublicKey.swift */; };
+		4700C7AB21EFDF990074E7E4 /* Signer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4700C7AA21EFDF990074E7E4 /* Signer.swift */; };
+		4700C7AD21EFDFAB0074E7E4 /* Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4700C7AC21EFDFAB0074E7E4 /* Encoding.swift */; };
+		4700C7AF21EFDFBC0074E7E4 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4700C7AE21EFDFBC0074E7E4 /* Error.swift */; };
+		4700C7B221EFE0A00074E7E4 /* secp256k1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4700C7B121EFE0A00074E7E4 /* secp256k1.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		47E8212421F61E37001C6A6B /* secp256k1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4700C7B121EFE0A00074E7E4 /* secp256k1.framework */; };
+		47E8214521F66F5B001C6A6B /* secp256k1.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 47E8214421F66F5B001C6A6B /* secp256k1.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		06BEB54821A4B50800C6724C /* PBXContainerItemProxy */ = {
+		4700C78D21EFDCC40074E7E4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0663517D219CDC1B003E22B4 /* Project object */;
+			containerPortal = 4700C77921EFDCC40074E7E4 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 06635185219CDC1B003E22B4;
+			remoteGlobalIDString = 4700C78121EFDCC40074E7E4;
 			remoteInfo = SawtoothSigning;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		06BEB54A21A4BFF900C6724C /* CopyFiles */ = {
+		47E8214321F66F3A001C6A6B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				06BEB54B21A4C02B00C6724C /* secp256k1.framework in CopyFiles */,
+				47E8214521F66F5B001C6A6B /* secp256k1.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		06635186219CDC1B003E22B4 /* SawtoothSigning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SawtoothSigning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		06635189219CDC1B003E22B4 /* SawtoothSigning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SawtoothSigning.h; sourceTree = "<group>"; };
-		0663518A219CDC1B003E22B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0663518F219CDC1B003E22B4 /* SawtoothSigningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SawtoothSigningTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		06635194219CDC1B003E22B4 /* SawtoothSigningTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SawtoothSigningTests.swift; sourceTree = "<group>"; };
-		06635196219CDC1B003E22B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		066351A0219CDDCA003E22B4 /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
-		066351A2219CE21F003E22B4 /* Secp256k1Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secp256k1Context.swift; sourceTree = "<group>"; };
-		06757BFA219DF12D00BB8470 /* CryptoFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoFactory.swift; sourceTree = "<group>"; };
-		06757BFC219DF1A100BB8470 /* PrivateKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateKey.swift; sourceTree = "<group>"; };
-		06757BFE219DF1BA00BB8470 /* PublicKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicKey.swift; sourceTree = "<group>"; };
-		06757C00219DF1E000BB8470 /* Secp256k1PrivateKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secp256k1PrivateKey.swift; sourceTree = "<group>"; };
-		06757C02219DF20400BB8470 /* Secp256k1PublicKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secp256k1PublicKey.swift; sourceTree = "<group>"; };
-		06757C04219DF21400BB8470 /* Signer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signer.swift; sourceTree = "<group>"; };
-		06757C08219DFDF500BB8470 /* secp256k1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = secp256k1.framework; path = Carthage/Build/iOS/secp256k1.framework; sourceTree = "<group>"; };
-		06757C0A219F52B800BB8470 /* Encoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encoding.swift; sourceTree = "<group>"; };
-		47C2217521D5294800417483 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		4700C78221EFDCC40074E7E4 /* SawtoothSigning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SawtoothSigning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4700C78521EFDCC40074E7E4 /* SawtoothSigning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SawtoothSigning.h; sourceTree = "<group>"; };
+		4700C78621EFDCC40074E7E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4700C78B21EFDCC40074E7E4 /* SawtoothSigningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SawtoothSigningTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4700C79021EFDCC40074E7E4 /* SawtoothSigningTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SawtoothSigningTests.swift; sourceTree = "<group>"; };
+		4700C79221EFDCC40074E7E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4700C79C21EFDEB90074E7E4 /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
+		4700C79E21EFDEE70074E7E4 /* Secp256k1Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secp256k1Context.swift; sourceTree = "<group>"; };
+		4700C7A021EFDF040074E7E4 /* CryptoFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoFactory.swift; sourceTree = "<group>"; };
+		4700C7A221EFDF200074E7E4 /* PrivateKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateKey.swift; sourceTree = "<group>"; };
+		4700C7A421EFDF3D0074E7E4 /* PublicKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicKey.swift; sourceTree = "<group>"; };
+		4700C7A621EFDF650074E7E4 /* Secp256k1PrivateKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secp256k1PrivateKey.swift; sourceTree = "<group>"; };
+		4700C7A821EFDF830074E7E4 /* Secp256k1PublicKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secp256k1PublicKey.swift; sourceTree = "<group>"; };
+		4700C7AA21EFDF990074E7E4 /* Signer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signer.swift; sourceTree = "<group>"; };
+		4700C7AC21EFDFAB0074E7E4 /* Encoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encoding.swift; sourceTree = "<group>"; };
+		4700C7AE21EFDFBC0074E7E4 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		4700C7B121EFE0A00074E7E4 /* secp256k1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = secp256k1.framework; path = Carthage/Build/iOS/secp256k1.framework; sourceTree = "<group>"; };
+		47E8214421F66F5B001C6A6B /* secp256k1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = secp256k1.framework; path = Carthage/Build/iOS/secp256k1.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		06635183219CDC1B003E22B4 /* Frameworks */ = {
+		4700C77F21EFDCC40074E7E4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06757C09219DFDF500BB8470 /* secp256k1.framework in Frameworks */,
+				4700C7B221EFE0A00074E7E4 /* secp256k1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0663518C219CDC1B003E22B4 /* Frameworks */ = {
+		4700C78821EFDCC40074E7E4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06635190219CDC1B003E22B4 /* SawtoothSigning.framework in Frameworks */,
-				06BEB54721A4B00900C6724C /* secp256k1.framework in Frameworks */,
+				47E8212421F61E37001C6A6B /* secp256k1.framework in Frameworks */,
+				4700C78C21EFDCC40074E7E4 /* SawtoothSigning.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0663517C219CDC1B003E22B4 = {
+		4700C77821EFDCC40074E7E4 = {
 			isa = PBXGroup;
 			children = (
-				06635188219CDC1B003E22B4 /* SawtoothSigning */,
-				06635193219CDC1B003E22B4 /* SawtoothSigningTests */,
-				06635187219CDC1B003E22B4 /* Products */,
-				06757C07219DFDF500BB8470 /* Frameworks */,
+				47E8214421F66F5B001C6A6B /* secp256k1.framework */,
+				4700C78421EFDCC40074E7E4 /* SawtoothSigning */,
+				4700C78F21EFDCC40074E7E4 /* SawtoothSigningTests */,
+				4700C78321EFDCC40074E7E4 /* Products */,
+				4700C7B021EFE0A00074E7E4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		06635187219CDC1B003E22B4 /* Products */ = {
+		4700C78321EFDCC40074E7E4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				06635186219CDC1B003E22B4 /* SawtoothSigning.framework */,
-				0663518F219CDC1B003E22B4 /* SawtoothSigningTests.xctest */,
+				4700C78221EFDCC40074E7E4 /* SawtoothSigning.framework */,
+				4700C78B21EFDCC40074E7E4 /* SawtoothSigningTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		06635188219CDC1B003E22B4 /* SawtoothSigning */ = {
+		4700C78421EFDCC40074E7E4 /* SawtoothSigning */ = {
 			isa = PBXGroup;
 			children = (
-				06635189219CDC1B003E22B4 /* SawtoothSigning.h */,
-				0663518A219CDC1B003E22B4 /* Info.plist */,
-				066351A0219CDDCA003E22B4 /* Context.swift */,
-				066351A2219CE21F003E22B4 /* Secp256k1Context.swift */,
-				06757BFA219DF12D00BB8470 /* CryptoFactory.swift */,
-				06757BFC219DF1A100BB8470 /* PrivateKey.swift */,
-				06757BFE219DF1BA00BB8470 /* PublicKey.swift */,
-				06757C00219DF1E000BB8470 /* Secp256k1PrivateKey.swift */,
-				06757C02219DF20400BB8470 /* Secp256k1PublicKey.swift */,
-				06757C04219DF21400BB8470 /* Signer.swift */,
-				06757C0A219F52B800BB8470 /* Encoding.swift */,
-				47C2217521D5294800417483 /* Error.swift */,
+				4700C78521EFDCC40074E7E4 /* SawtoothSigning.h */,
+				4700C78621EFDCC40074E7E4 /* Info.plist */,
+				4700C79C21EFDEB90074E7E4 /* Context.swift */,
+				4700C79E21EFDEE70074E7E4 /* Secp256k1Context.swift */,
+				4700C7A021EFDF040074E7E4 /* CryptoFactory.swift */,
+				4700C7A221EFDF200074E7E4 /* PrivateKey.swift */,
+				4700C7A421EFDF3D0074E7E4 /* PublicKey.swift */,
+				4700C7A621EFDF650074E7E4 /* Secp256k1PrivateKey.swift */,
+				4700C7A821EFDF830074E7E4 /* Secp256k1PublicKey.swift */,
+				4700C7AA21EFDF990074E7E4 /* Signer.swift */,
+				4700C7AC21EFDFAB0074E7E4 /* Encoding.swift */,
+				4700C7AE21EFDFBC0074E7E4 /* Error.swift */,
 			);
 			path = SawtoothSigning;
 			sourceTree = "<group>";
 		};
-		06635193219CDC1B003E22B4 /* SawtoothSigningTests */ = {
+		4700C78F21EFDCC40074E7E4 /* SawtoothSigningTests */ = {
 			isa = PBXGroup;
 			children = (
-				06635194219CDC1B003E22B4 /* SawtoothSigningTests.swift */,
-				06635196219CDC1B003E22B4 /* Info.plist */,
+				4700C79021EFDCC40074E7E4 /* SawtoothSigningTests.swift */,
+				4700C79221EFDCC40074E7E4 /* Info.plist */,
 			);
 			path = SawtoothSigningTests;
 			sourceTree = "<group>";
 		};
-		06757C07219DFDF500BB8470 /* Frameworks */ = {
+		4700C7B021EFE0A00074E7E4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				06757C08219DFDF500BB8470 /* secp256k1.framework */,
+				4700C7B121EFE0A00074E7E4 /* secp256k1.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -147,27 +149,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		06635181219CDC1B003E22B4 /* Headers */ = {
+		4700C77D21EFDCC40074E7E4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06635197219CDC1B003E22B4 /* SawtoothSigning.h in Headers */,
+				4700C79321EFDCC40074E7E4 /* SawtoothSigning.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		06635185219CDC1B003E22B4 /* SawtoothSigning */ = {
+		4700C78121EFDCC40074E7E4 /* SawtoothSigning */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0663519A219CDC1B003E22B4 /* Build configuration list for PBXNativeTarget "SawtoothSigning" */;
+			buildConfigurationList = 4700C79621EFDCC40074E7E4 /* Build configuration list for PBXNativeTarget "SawtoothSigning" */;
 			buildPhases = (
-				06757C06219DFA2100BB8470 /* Run Script */,
-				06BEB54D21A5DAB200C6724C /* ShellScript */,
-				06635181219CDC1B003E22B4 /* Headers */,
-				06635182219CDC1B003E22B4 /* Sources */,
-				06635183219CDC1B003E22B4 /* Frameworks */,
-				06635184219CDC1B003E22B4 /* Resources */,
+				4700C77D21EFDCC40074E7E4 /* Headers */,
+				4700C77E21EFDCC40074E7E4 /* Sources */,
+				4700C77F21EFDCC40074E7E4 /* Frameworks */,
+				4700C78021EFDCC40074E7E4 /* Resources */,
+				4700C7B321F61B610074E7E4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -175,74 +176,74 @@
 			);
 			name = SawtoothSigning;
 			productName = SawtoothSigning;
-			productReference = 06635186219CDC1B003E22B4 /* SawtoothSigning.framework */;
+			productReference = 4700C78221EFDCC40074E7E4 /* SawtoothSigning.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		0663518E219CDC1B003E22B4 /* SawtoothSigningTests */ = {
+		4700C78A21EFDCC40074E7E4 /* SawtoothSigningTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0663519D219CDC1B003E22B4 /* Build configuration list for PBXNativeTarget "SawtoothSigningTests" */;
+			buildConfigurationList = 4700C79921EFDCC40074E7E4 /* Build configuration list for PBXNativeTarget "SawtoothSigningTests" */;
 			buildPhases = (
-				0663518C219CDC1B003E22B4 /* Frameworks */,
-				0663518B219CDC1B003E22B4 /* Sources */,
-				0663518D219CDC1B003E22B4 /* Resources */,
-				06BEB54A21A4BFF900C6724C /* CopyFiles */,
+				4700C78821EFDCC40074E7E4 /* Frameworks */,
+				4700C78721EFDCC40074E7E4 /* Sources */,
+				4700C78921EFDCC40074E7E4 /* Resources */,
+				47E8214321F66F3A001C6A6B /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				06BEB54921A4B50800C6724C /* PBXTargetDependency */,
+				4700C78E21EFDCC40074E7E4 /* PBXTargetDependency */,
 			);
 			name = SawtoothSigningTests;
 			productName = SawtoothSigningTests;
-			productReference = 0663518F219CDC1B003E22B4 /* SawtoothSigningTests.xctest */;
+			productReference = 4700C78B21EFDCC40074E7E4 /* SawtoothSigningTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		0663517D219CDC1B003E22B4 /* Project object */ = {
+		4700C77921EFDCC40074E7E4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Bitwise IO";
 				TargetAttributes = {
-					06635185219CDC1B003E22B4 = {
+					4700C78121EFDCC40074E7E4 = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
 					};
-					0663518E219CDC1B003E22B4 = {
+					4700C78A21EFDCC40074E7E4 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
-			buildConfigurationList = 06635180219CDC1B003E22B4 /* Build configuration list for PBXProject "SawtoothSigning" */;
+			buildConfigurationList = 4700C77C21EFDCC40074E7E4 /* Build configuration list for PBXProject "SawtoothSigning" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 0663517C219CDC1B003E22B4;
-			productRefGroup = 06635187219CDC1B003E22B4 /* Products */;
+			mainGroup = 4700C77821EFDCC40074E7E4;
+			productRefGroup = 4700C78321EFDCC40074E7E4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				06635185219CDC1B003E22B4 /* SawtoothSigning */,
-				0663518E219CDC1B003E22B4 /* SawtoothSigningTests */,
+				4700C78121EFDCC40074E7E4 /* SawtoothSigning */,
+				4700C78A21EFDCC40074E7E4 /* SawtoothSigningTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		06635184219CDC1B003E22B4 /* Resources */ = {
+		4700C78021EFDCC40074E7E4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0663518D219CDC1B003E22B4 /* Resources */ = {
+		4700C78921EFDCC40074E7E4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -252,27 +253,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		06757C06219DFA2100BB8470 /* Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/secp256k1.framework",
-			);
-			name = "Run Script";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/secp256k1.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-		06BEB54D21A5DAB200C6724C /* ShellScript */ = {
+		4700C7B321F61B610074E7E4 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -292,43 +273,43 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		06635182219CDC1B003E22B4 /* Sources */ = {
+		4700C77E21EFDCC40074E7E4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06757C01219DF1E000BB8470 /* Secp256k1PrivateKey.swift in Sources */,
-				06757BFF219DF1BA00BB8470 /* PublicKey.swift in Sources */,
-				066351A3219CE21F003E22B4 /* Secp256k1Context.swift in Sources */,
-				06757BFB219DF12D00BB8470 /* CryptoFactory.swift in Sources */,
-				066351A1219CDDCA003E22B4 /* Context.swift in Sources */,
-				06757BFD219DF1A100BB8470 /* PrivateKey.swift in Sources */,
-				06757C03219DF20400BB8470 /* Secp256k1PublicKey.swift in Sources */,
-				06757C05219DF21400BB8470 /* Signer.swift in Sources */,
-				47C2217621D5294800417483 /* Error.swift in Sources */,
-				06757C0B219F52B800BB8470 /* Encoding.swift in Sources */,
+				4700C7AD21EFDFAB0074E7E4 /* Encoding.swift in Sources */,
+				4700C7A721EFDF650074E7E4 /* Secp256k1PrivateKey.swift in Sources */,
+				4700C7A521EFDF3D0074E7E4 /* PublicKey.swift in Sources */,
+				4700C79F21EFDEE70074E7E4 /* Secp256k1Context.swift in Sources */,
+				4700C7A121EFDF040074E7E4 /* CryptoFactory.swift in Sources */,
+				4700C79D21EFDEB90074E7E4 /* Context.swift in Sources */,
+				4700C7A321EFDF200074E7E4 /* PrivateKey.swift in Sources */,
+				4700C7A921EFDF830074E7E4 /* Secp256k1PublicKey.swift in Sources */,
+				4700C7AF21EFDFBC0074E7E4 /* Error.swift in Sources */,
+				4700C7AB21EFDF990074E7E4 /* Signer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0663518B219CDC1B003E22B4 /* Sources */ = {
+		4700C78721EFDCC40074E7E4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06635195219CDC1B003E22B4 /* SawtoothSigningTests.swift in Sources */,
+				4700C79121EFDCC40074E7E4 /* SawtoothSigningTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		06BEB54921A4B50800C6724C /* PBXTargetDependency */ = {
+		4700C78E21EFDCC40074E7E4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 06635185219CDC1B003E22B4 /* SawtoothSigning */;
-			targetProxy = 06BEB54821A4B50800C6724C /* PBXContainerItemProxy */;
+			target = 4700C78121EFDCC40074E7E4 /* SawtoothSigning */;
+			targetProxy = 4700C78D21EFDCC40074E7E4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		06635198219CDC1B003E22B4 /* Debug */ = {
+		4700C79421EFDCC40074E7E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -392,7 +373,7 @@
 			};
 			name = Debug;
 		};
-		06635199219CDC1B003E22B4 /* Release */ = {
+		4700C79521EFDCC40074E7E4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -441,7 +422,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -451,13 +431,14 @@
 			};
 			name = Release;
 		};
-		0663519B219CDC1B003E22B4 /* Debug */ = {
+		4700C79721EFDCC40074E7E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -467,6 +448,7 @@
 				);
 				INFOPLIST_FILE = SawtoothSigning/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -481,13 +463,14 @@
 			};
 			name = Debug;
 		};
-		0663519C219CDC1B003E22B4 /* Release */ = {
+		4700C79821EFDCC40074E7E4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -497,6 +480,7 @@
 				);
 				INFOPLIST_FILE = SawtoothSigning/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -510,7 +494,7 @@
 			};
 			name = Release;
 		};
-		0663519E219CDC1B003E22B4 /* Debug */ = {
+		4700C79A21EFDCC40074E7E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -527,12 +511,13 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = bitwiseio.SawtoothSigningTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		0663519F219CDC1B003E22B4 /* Release */ = {
+		4700C79B21EFDCC40074E7E4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -549,6 +534,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = bitwiseio.SawtoothSigningTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -557,34 +543,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		06635180219CDC1B003E22B4 /* Build configuration list for PBXProject "SawtoothSigning" */ = {
+		4700C77C21EFDCC40074E7E4 /* Build configuration list for PBXProject "SawtoothSigning" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				06635198219CDC1B003E22B4 /* Debug */,
-				06635199219CDC1B003E22B4 /* Release */,
+				4700C79421EFDCC40074E7E4 /* Debug */,
+				4700C79521EFDCC40074E7E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0663519A219CDC1B003E22B4 /* Build configuration list for PBXNativeTarget "SawtoothSigning" */ = {
+		4700C79621EFDCC40074E7E4 /* Build configuration list for PBXNativeTarget "SawtoothSigning" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0663519B219CDC1B003E22B4 /* Debug */,
-				0663519C219CDC1B003E22B4 /* Release */,
+				4700C79721EFDCC40074E7E4 /* Debug */,
+				4700C79821EFDCC40074E7E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0663519D219CDC1B003E22B4 /* Build configuration list for PBXNativeTarget "SawtoothSigningTests" */ = {
+		4700C79921EFDCC40074E7E4 /* Build configuration list for PBXNativeTarget "SawtoothSigningTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0663519E219CDC1B003E22B4 /* Debug */,
-				0663519F219CDC1B003E22B4 /* Release */,
+				4700C79A21EFDCC40074E7E4 /* Debug */,
+				4700C79B21EFDCC40074E7E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 0663517D219CDC1B003E22B4 /* Project object */;
+	rootObject = 4700C77921EFDCC40074E7E4 /* Project object */;
 }
