@@ -19,6 +19,12 @@
 import Foundation
 import os
 
+func logMessage(msg: String) {
+    if #available(iOS 10.0, *) {
+        os_log("%@", msg)
+    }
+}
+
 class XOApi {
 
     init() {
@@ -67,11 +73,11 @@ class XOApi {
         do {
             try postUrlRequest.httpBody = batchList.serializedData()
         } catch {
-            os_log("Unable to serialize batch data")
+            logMessage(msg: "Unable to serialize batch data")
         }
         URLSession.shared.dataTask(with: postUrlRequest) { (data, response, error) in
             if error != nil {
-                os_log("%@", error!.localizedDescription)
+                logMessage(msg: error!.localizedDescription)
             }
             guard data != nil else {
                 return
@@ -97,7 +103,7 @@ class XOApi {
         let batchStatuses = URL(string: url + "/batch_statuses?id=\(batchID)&wait=\(wait)")!
         URLSession.shared.dataTask(with: batchStatuses) {(data, response, error) in
             if error != nil {
-                os_log("%@", error!.localizedDescription)
+                logMessage(msg: error!.localizedDescription)
             }
             guard let data = data else {
                 return
@@ -107,11 +113,11 @@ class XOApi {
                     do {
                         let jsonResponse = try JSONSerialization.jsonObject(with: data, options: [])
                         guard let batchStatusResponse = jsonResponse as? [String: Any] else {
-                            os_log("Failed to deserialize batch status response")
+                            logMessage(msg: "Failed to deserialize batch status response")
                             return
                         }
                         guard let dataArray = batchStatusResponse["data"] as? [[String: Any]] else {
-                            os_log("Failed to fetch batch status data")
+                            logMessage(msg: "Failed to fetch batch status data")
                             return
                         }
                         let batchStatus = dataArray.compactMap(BatchStatus.init)[0]
@@ -119,11 +125,11 @@ class XOApi {
                             completion(self.handleBatchStatus(batchStatus: batchStatus))
                         }
                     } catch let parsingError {
-                        os_log("Error  %@", parsingError.localizedDescription)
+                        logMessage(msg: String(format: "Error  %@", parsingError.localizedDescription))
                     }
                 }
             } else {
-                os_log("Error parsing batch status response")
+                logMessage(msg: "Error parsing batch status response")
                 return
             }
         }.resume()
@@ -133,20 +139,20 @@ class XOApi {
         switch batchStatus.status {
         case BatchStatusEnum.invalid:
             let invalidTransaction = batchStatus.invalidTransactions[0]
-            os_log("%@", invalidTransaction.message)
-            os_log("Invalid Transaction ID: %@", invalidTransaction.id)
+            logMessage(msg: invalidTransaction.message)
+            logMessage(msg: String(format: "Invalid Transaction ID: %@", invalidTransaction.id))
             return invalidTransaction.message
         case BatchStatusEnum.committed:
-            os_log("Batch Successfully Committed!")
+            logMessage(msg: "Batch Successfully Committed!")
             return "Batch Successfully Committed!"
         case BatchStatusEnum.pending:
-            os_log("Batch Pending")
+            logMessage(msg: "Batch Pending")
             return "Batch Pending"
         case BatchStatusEnum.unknown:
-            os_log("Batch Status Unknown")
+            logMessage(msg: "Batch Status Unknown")
             return "Batch Status Unknown"
         case BatchStatusEnum.unhandled:
-            os_log("Unhandled status")
+            logMessage(msg: "Unhandled status")
             return "Unhandled Status"
         }
     }
@@ -155,7 +161,7 @@ class XOApi {
         let stateResponse = URL(string: url + "/state?address=\(address)")!
         URLSession.shared.dataTask(with: stateResponse) {(data, response, error) in
             if error != nil {
-                os_log("%@", error!.localizedDescription)
+                logMessage(msg: error!.localizedDescription)
             }
             guard let data = data else {
                  DispatchQueue.main.async {
@@ -171,18 +177,18 @@ class XOApi {
                             completion(self.parseState(response: jsonResponse))
                         }
                     } catch let parsingError {
-                        os_log("Error %@", parsingError.localizedDescription)
+                        logMessage(msg: String(format: "Error %@", parsingError.localizedDescription))
                     }
                 }
             } else {
-                os_log("Error parsing batch status response")
+                logMessage(msg: "Error parsing batch status response")
             }
             }.resume()
     }
 
     private func parseState(response: Any) -> [String: Any] {
         guard let response = response as? [String: Any] else {
-            os_log("Unable to deserialize state data")
+           logMessage(msg: "Unable to deserialize state data")
             return [:]
         }
         return response
