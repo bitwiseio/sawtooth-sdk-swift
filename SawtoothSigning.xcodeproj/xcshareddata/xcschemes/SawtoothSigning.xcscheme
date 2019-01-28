@@ -4,7 +4,7 @@
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
-      buildImplicitDependencies = "NO">
+      buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "06635185219CDC1B003E22B4"
+               BlueprintIdentifier = "4700C78121EFDCC40074E7E4"
                BuildableName = "SawtoothSigning.framework"
                BlueprintName = "SawtoothSigning"
                ReferencedContainer = "container:SawtoothSigning.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0663518E219CDC1B003E22B4"
+               BlueprintIdentifier = "4700C78A21EFDCC40074E7E4"
                BuildableName = "SawtoothSigningTests.xctest"
                BlueprintName = "SawtoothSigningTests"
                ReferencedContainer = "container:SawtoothSigning.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "06635185219CDC1B003E22B4"
+            BlueprintIdentifier = "4700C78121EFDCC40074E7E4"
             BuildableName = "SawtoothSigning.framework"
             BlueprintName = "SawtoothSigning"
             ReferencedContainer = "container:SawtoothSigning.xcodeproj">
@@ -64,7 +64,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "06635185219CDC1B003E22B4"
+            BlueprintIdentifier = "4700C78121EFDCC40074E7E4"
             BuildableName = "SawtoothSigning.framework"
             BlueprintName = "SawtoothSigning"
             ReferencedContainer = "container:SawtoothSigning.xcodeproj">
@@ -82,7 +82,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "06635185219CDC1B003E22B4"
+            BlueprintIdentifier = "4700C78121EFDCC40074E7E4"
             BuildableName = "SawtoothSigning.framework"
             BlueprintName = "SawtoothSigning"
             ReferencedContainer = "container:SawtoothSigning.xcodeproj">
