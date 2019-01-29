@@ -54,7 +54,9 @@ class CreateGameViewController: UIViewController {
                                                                    comment: "Default action"),
                                           style: .default,
                                           handler: { _ in
-                os_log("The \"OK\" alert occurred.")
+                                            if #available(iOS 10.0, *) {
+                                                os_log("The \"OK\" alert occurred.")
+                                            }
             }))
             self.present(alert, animated: true, completion: nil)
         }
